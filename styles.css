@@ -321,3 +321,25 @@ animation: text-shadow-drop-top 0.9s 3s both;
       opacity: 1;
     }
   }
+
+
+  @media (max-width : 768px){
+    body {
+      overflow-x: hidden;
+    }
+    .navigation{
+        display: none;
+    }
+    .header--left{
+        left: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header--name{
+        margin-left: 30px;
+    }
+
+    .content{
+        margin-left: 10px;
+    }
+}
