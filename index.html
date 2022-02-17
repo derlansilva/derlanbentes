@@ -10,11 +10,14 @@
 </head>
 
 <body>
+    
     <div class="container">
         <header>
             <div class="header--left">
                 <div class="header--profile">
-                    <img class="header--photo" src="./img/photo.jpg" />
+                    <div class="header--photo">
+                        <img src="./img/photo.jpg" />
+                    </div>
                     <div class="header--name">derlan silva</div>
                 </div>
             </div>
@@ -24,7 +27,7 @@
 
                 <div class="navigation">
                     <ul>
-                        <li class="list">
+                        <li class="list  home active">
                             <a href="#">
                                 <span class="icon">
                                     <ion-icon name="home-outline"></ion-icon>
@@ -33,8 +36,7 @@
                             </a>
                         </li>
 
-
-                        <li class="list">
+                        <li class="list contact">
                             <a href="#">
                                 <div class="icon">
                                     <ion-icon name="call-outline"></ion-icon>
@@ -43,7 +45,7 @@
                             </a>
                         </li>
 
-                        <li class="list">
+                        <li class="list project">
                             <a href="#">
                                 <div class="icon">
                                     <ion-icon name="code-outline"></ion-icon>
@@ -52,7 +54,7 @@
                             </a>
                         </li>
 
-                        <li class="list">
+                        <li class="list message">
                             <a href="#">
                                 <span class="icon">
                                     <ion-icon name="chatbox-ellipses-outline"></ion-icon>
@@ -60,7 +62,8 @@
                                 <span class="text">Messages</span>
                             </a>
                         </li>
-                        <li class="list">
+
+                        <li class="list profile">
                             <a href="#">
                                 <div class="icon">
                                     <ion-icon name="person-outline"></ion-icon>
@@ -78,14 +81,31 @@
 
 
         <div class="content">
-            <div class="content--text">
-                <div class="content--hello">Hello! Welcome to my page</div>
+            <div class="content--home home">
+                <div class="content--hello">Hi, I`m Derlan Silva ,</div>
+                <div class="content--hello">Software developer</div>
                 <div class="text-reveal">
-                    <div class="animation--text">I´m Back-end developer jr </div>
+                    <div class="animation--read">
+                        
+                    </div>
                 </div>
-                <div class="animation--read">
-                    Front-end developer
-                </div>
+
+            </div>
+
+            <div class="content--contact contact" style="display: none;">
+                <div class="content--hello">Hello , this contact page</div>
+            </div>
+
+            <div class="content--project project" style="display: none;">
+                <div class="content--hello">Hello , this Projects page</div>
+            </div>
+
+            <div class="content--message message" style="display: none;">
+                <div class="content--hello">Hello , this Message page</div>
+            </div>
+
+            <div class="content--profile profile" style="display: none;">
+                <div class="content--hello">Hello , this About page</div>
 
             </div>
 
@@ -95,6 +115,24 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <script src="./src/javascript/controler/index.js"></script>
+    <script src="./src/javascript/pageController.js"></script>
+
+    <script>
+        let list = document.querySelectorAll('.list')
+
+        function activeList(){
+            list.forEach(item => {
+                item.classList.remove('active')
+
+                this.classList.add('active')
+            })
+        }
+
+        list.forEach((item) => {
+            item.addEventListener('click' , activeList)
+        })
+    </script>
 </body>
 
 </html>
