@@ -9,8 +9,11 @@
 
 body{
     font-family: 'Teko', sans-serif;
-    background:  linear-gradient(to left, rgb(14, 12, 22), rgb(12, 12, 14));
-   
+
+    background-color: #000;
+	background-image: radial-gradient(ellipse at top, #335476 0.0%, #31506e 11.1%, #304b67 22.2%, #2f4760 33.3%, #2d4359 44.4%, #2c3f51 55.6%, #2a3a4a 66.7%, #293643 77.8%, #28323d 88.9%, #262e36 100.0%);
+	height: 100vh;
+	overflow: hidden;
 }
 
 @keyframes gradient{
@@ -46,7 +49,7 @@ header{
   }
   
 .container{
-    height: 100vh;
+    min-height: 100vh;
     
     background: linear-gradient(to left, transparent, rgb(7, 4, 7));
 }
@@ -54,11 +57,9 @@ header{
     min-height: 500px;
     width: 80%;
     margin: auto;
+    animation: slide-in-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    animation: slide-in-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    align-items: center;
 }
 @keyframes slide-in-top {
     0% {
@@ -72,7 +73,6 @@ header{
       opacity: 1;
     }
   }
-  
 
 .header--left{
     background-color: transparent;
@@ -107,6 +107,7 @@ header{
 .header--photo img{
     width: 50px;
     height: 50px;
+    border: #111 solid 4px;
     border-radius: 50%;
     animation: slit-in-vertical 0.7s 3s ease-out both;
 }
@@ -230,6 +231,24 @@ header{
     justify-content: center;
     animation: transition 4s ease ;
 }
+
+.navigation ul li:nth-child(1){
+    animation: slit-in-vertical 1s 3.4s ease-out both;
+}
+
+.navigation ul li:nth-child(2){
+    animation : slit-in-vertical 1s 3.8s ease-out both;
+}
+.navigation ul li:nth-child(3){
+    animation: slit-in-vertical 1s 4.1s ease-out both ;
+}
+.navigation ul li:nth-child(4){
+    animation: slit-in-vertical 1s 4.5s ease-out both;
+}
+.navigation ul li:nth-child(5){
+    animation: slit-in-vertical 1s 4.9s ease-out both;
+}
+
 @keyframes transition{
     0%{
         opacity: 0;
@@ -311,8 +330,59 @@ animation: text-shadow-drop-top 0.9s 3s both;
     font-size: 5rem;
     font-weight: 200;
     animation: tracking-in-expand 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+.content--list{
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content--game{
+    width: 300px;
+    height: 400px;
+    border: #f6f6f8 solid 0.2px;
+    transform: scale(0.9);
+    margin-top: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.5s;
+    color: #eaeaf0;
+    text-shadow: #08fdd8;
+    
+}
+.content--game:hover{
+    cursor: pointer;
+    
+    transform: scale(1);
+    box-shadow:0 0 0 0.1px #08fdd8 , 
+    0 0 0 2px #08fdd833  , 
+    0 0 0 10px #08fdd811;
+}
+
+.project--text{
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.list--title{
+    width: 100%;
+    height: 20px;
+    text-shadow: #eaeaf0;
+    color: #eaeaf0;
+}
+
+.content--img{
+    position: absolute;
+    width: 100%;
    
 }
+
 @keyframes gradient{
     0%{
         background-position: 0 , 50%;
@@ -344,7 +414,7 @@ animation: text-shadow-drop-top 0.9s 3s both;
 
 /* classe que remove o elemento */
 .slide-out-left {
-	    animation: slide-out-left 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	    animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 
@@ -472,7 +542,7 @@ animation: text-shadow-drop-top 0.9s 3s both;
         color: #eaeaf0;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
     .content--hello{
         font-size: 25px;
@@ -481,3 +551,7 @@ animation: text-shadow-drop-top 0.9s 3s both;
 }
 
   
+
+
+
+
