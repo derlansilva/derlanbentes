@@ -28,12 +28,32 @@ class Controller{
 
     }
 
-    removeElement(){
+    removeElement(element){
         this.content.classList.add('slide-out-left')
         setTimeout(() => {
+            console.log(this.contentchild.classList[0])
             if(this.contentchild){
-                this.content.removeChild(this.contentchild)
                 this.content.classList.remove('slide-out-left')
+                if(element == 'contact'){
+                    this.createContactElement()
+                    return
+                }
+                if(element == 'home'){
+                    this.createHomeElement()
+                    return
+                }
+                if(element == 'project'){
+                    this.createProjectElement()
+                    return
+                }
+                if(element =='message'){
+                    this.createMessageElement()
+                    return
+                }
+                if(element == 'profile'){
+                    this.createAboutElement()
+                    return
+                }
             }
         }, 1000)
     }
@@ -44,6 +64,7 @@ class Controller{
         this.project.style.display = 'none'
         this.message.style.display = 'none'
         this.contact.style.display = 'grid'
+       
     }
     createHomeElement(){
         this.about.style.display = 'none'
@@ -85,26 +106,7 @@ class Controller{
                         }else{
                             console.log('não são iguais' , element , elem)
                             elem = element
-                            if(element == 'contact'){
-                                this.createContactElement()
-                                return
-                            }
-                            if(element == 'home'){
-                                this.createHomeElement()
-                                return
-                            }
-                            if(element == 'project'){
-                                this.createProjectElement()
-                                return
-                            }
-                            if(element =='message'){
-                                this.createMessageElement()
-                                return
-                            }
-                            if(element == 'profile'){
-                                this.createAboutElement()
-                                return
-                            }
+                            this.removeElement(element)
                         }
                     }
                 })
