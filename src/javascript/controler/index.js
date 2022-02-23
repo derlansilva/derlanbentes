@@ -1,7 +1,7 @@
 
 
-class Controller{
-    constructor(){
+class Controller {
+    constructor() {
         this.content = document.querySelector('.content')
         this.contentchild = document.querySelector('.content > *')
         this.list = document.querySelectorAll('.list')
@@ -10,47 +10,38 @@ class Controller{
         this.project = document.querySelector('.content--project')
         this.message = document.querySelector('.content--message')
         this.about = document.querySelector('.content--profile')
-    
+
         this.menuClick()
+
         this.animationRead()
     }
 
-    animationRead(){
-        const read = document.querySelector(".animation--read")
-        let txt = document.createElement('div')
-        let verificatio = false
-        let text = [ 'TypesCript' , 'Javascript' ,'Python']
-        for (let i =0 ; i <=text.length ; i++){
-            setTimeout(() => {
-                console.log(text[i])
-            }, 5000)
-        }
-
+    animationRead() {
+        
     }
 
-    removeElement(element){
+    removeElement(element) {
         this.content.classList.add('slide-out-left')
         setTimeout(() => {
-            console.log(this.contentchild.classList[0])
-            if(this.contentchild){
+            if (this.contentchild) {
                 this.content.classList.remove('slide-out-left')
-                if(element == 'contact'){
+                if (element == 'contact') {
                     this.createContactElement()
                     return
                 }
-                if(element == 'home'){
+                if (element == 'home') {
                     this.createHomeElement()
                     return
                 }
-                if(element == 'project'){
+                if (element == 'project') {
                     this.createProjectElement()
                     return
                 }
-                if(element =='message'){
+                if (element == 'message') {
                     this.createMessageElement()
                     return
                 }
-                if(element == 'profile'){
+                if (element == 'profile') {
                     this.createAboutElement()
                     return
                 }
@@ -58,53 +49,53 @@ class Controller{
         }, 1000)
     }
 
-    createContactElement(){
+    createContactElement() {
         this.about.style.display = 'none'
         this.home.style.display = 'none'
         this.project.style.display = 'none'
         this.message.style.display = 'none'
         this.contact.style.display = 'grid'
-       
+
     }
-    createHomeElement(){
+    createHomeElement() {
         this.about.style.display = 'none'
         this.contact.style.display = 'none'
         this.project.style.display = 'none'
         this.message.style.display = 'none'
         this.home.style.display = 'grid'
     }
-    createProjectElement(){
+    createProjectElement() {
         this.about.style.display = 'none'
         this.home.style.display = 'none'
         this.contact.style.display = 'none'
         this.message.style.display = 'none'
         this.project.style.display = 'grid'
     }
-    createMessageElement(){
+    createMessageElement() {
         this.about.style.display = 'none'
         this.home.style.display = 'none'
         this.contact.style.display = 'none'
         this.project.style.display = 'none'
         this.message.style.display = 'grid'
     }
-    createAboutElement(){
+    createAboutElement() {
+        //let profile = document.querySelector('.header--left')
+        //profile.style.display = 'none'
         this.home.style.display = 'none'
         this.contact.style.display = 'none'
         this.project.style.display = 'none'
         this.message.style.display = 'none'
         this.about.style.display = 'grid'
+
     }
-    menuClick(){
+    menuClick() {
         let elem = 'home'
         this.list.forEach((item) => {
-            item.addEventListener('click' ,() => {
-                console.log('item' , item)
-                item.classList.forEach((element, index) => {               
-                    if(index == 1){
-                        if(element == elem){
-                            console.log("são iguais")
-                        }else{
-                            console.log('não são iguais' , element , elem)
+            item.addEventListener('click', () => {
+                console.log('item', item)
+                item.classList.forEach((element, index) => {
+                    if (index == 1) {
+                        if (element != elem) {
                             elem = element
                             this.removeElement(element)
                         }

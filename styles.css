@@ -12,8 +12,8 @@ body{
 
     background-color: #000;
 	background-image: radial-gradient(ellipse at top, #335476 0.0%, #31506e 11.1%, #304b67 22.2%, #2f4760 33.3%, #2d4359 44.4%, #2c3f51 55.6%, #2a3a4a 66.7%, #293643 77.8%, #28323d 88.9%, #262e36 100.0%);
-	height: 100vh;
-	overflow: hidden;
+	min-height: 100vh;
+	
 }
 
 @keyframes gradient{
@@ -26,11 +26,11 @@ body{
 }
 
 header{
-    background-color: transparent;
-    /*background: #161b22;*/
+   
+   
     /*background: linear-gradient(to bottom, transparent, rgb(7, 4, 7));*/
     width: 100%;
-    height: 60px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     animation: slide-in-left 1s 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -61,6 +61,8 @@ header{
     display: flex;
     align-items: center;
 }
+
+/* animação da tela descendo*/
 @keyframes slide-in-top {
     0% {
       -webkit-transform: translateY(-1000px);
@@ -99,7 +101,7 @@ header{
     border-radius: 50%;
     line-height: 0;
     left: 10%;
-    border-radius: 50%;
+  
     
     animation: slit-in-vertical 0.7s 3s ease-out both;
 }
@@ -111,6 +113,7 @@ header{
     border-radius: 50%;
     animation: slit-in-vertical 0.7s 3s ease-out both;
 }
+/*animações dos elemento do header giram*/
 @keyframes slit-in-vertical {
     0% {
       -webkit-transform: translateZ(-800px) rotateY(90deg);
@@ -146,11 +149,12 @@ header{
 .navigation{
     position: relative;
     width: 100%;
-    height: 50px;
+    height: 100%;
     background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+   
 }
 
 .navigation ul{
@@ -160,15 +164,19 @@ header{
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 100%;
     right: 20%;
+   
 }
 .navigation ul li{
     position: relative;
     list-style: none;
     text-align: center;
     width: 95px;
-    height: 50px;
+    height: 100%;
     color: #fff;
+   
+  
     
 }
 .navigation ul li a{
@@ -177,8 +185,10 @@ header{
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
     text-align: center;
     font-weight: 500;
+  
 }
 .navigation ul li a .icon{
     position: relative;
@@ -187,25 +197,47 @@ header{
     font-size: 1.5em;
     text-align: center;
     color: #eaeaf0;
+    width: 100%;
 }
 .navigation ul li:hover a  .icon{
     transform: translateY(50px);
     background: #fff;
     color: #111;
-    width: 50px; 
-    height: 50px;  
+    width: 60px; 
+    height: 60px;  
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    transition: all ease 0.5s;
+    border-radius: 5px;
+    transition: all ease 0.8s;
     
 }
-.navigation ul li.active a  .icon{
+.navigation ul li.active a .icon{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #46d469;
+    border-bottom: #46d469 solid 3px;
+    height: 60px;
+    width: 80px;
+    transition: all ease 0.9s;
 }
+.navigation ul li.active:hover a .icon{
+    transform: translateY(50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #46d469;
+    border-bottom: #46d469 solid 3px;
+    height: 60px;
+    width: 60px;
+    transition: all ease 0.9s;
+}
+
 .navigation ul li.active a .text{
     color: #46d469;
+    
 }
 .navigation ul li a .text{
     position: absolute;
@@ -218,7 +250,6 @@ header{
     opacity: 0;
     transform: translateY(20px);
 }
-
 .navigation ul li:hover a .text{
     opacity: 1;
     transform: translateX(2px);
@@ -230,6 +261,7 @@ header{
     align-items: center;
     justify-content: center;
     animation: transition 4s ease ;
+    
 }
 
 .navigation ul li:nth-child(1){
@@ -247,6 +279,7 @@ header{
 }
 .navigation ul li:nth-child(5){
     animation: slit-in-vertical 1s 4.9s ease-out both;
+   
 }
 
 @keyframes transition{
@@ -257,30 +290,6 @@ header{
         opacity: 1;
     }
 }
-
-
-.text-reveal{
-    
-    overflow: hidden;
-    position: relative;
-}
-.text-reveal::after{
-    background: #46d469;
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    animation: text-reveal 5s  cubic-bezier(0.85 , 0  , 0.15 , 1) forwards;
-    
-}
-
-.animation--read{
-    color: #46d469;
-}
-
     
 @keyframes text-reveal{
     from {
@@ -414,7 +423,7 @@ animation: text-shadow-drop-top 0.9s 3s both;
 
 /* classe que remove o elemento */
 .slide-out-left {
-	    animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	    animation: slide-out-left 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 
@@ -548,10 +557,128 @@ animation: text-shadow-drop-top 0.9s 3s both;
         font-size: 25px;
     }
 
+    .profile--content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+       
+    }
+
+    .profile--image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile--biograpy{
+        width: 100%;
+    }
 }
 
+.profile--content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
   
+.profile--image{
+    width: 25%;
+    height: 255px;
+  
+}
+
+.profile--img{
+    width: 255px;
+    height: 255px;
+    background: linear-gradient(100deg , #ff008e, #ffcd1e 100% );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50%;
+    left: 10%;
+    
+}
+.profile--photo{
+
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: #111 solid 6px;
+}
+
+.profile--biograpy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.6;
+    left: 15px;
+    width: 75%;
+    padding:  0 0 0 30px;
+   
+    left: 20px;
+}
 
 
+.content--message{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
 
+.message--content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
 
+.message--form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 600px;
+    
+}
+.message--form input{
+    background: transparent;
+    border: #858f99 solid 1px;
+    text-decoration: none;
+    color: #eaeaf0;
+    width: 350px;
+    height: 45px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.message--form textarea{
+    width: 350px;
+    margin-top: 20px;
+    background:transparent;
+    outline: none;
+    border: #858f99 solid 1px;
+    border-radius: 5px;
+}
+
+.message--form button{
+    width: 350px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    border: #858f99 solid 1px;
+    color: #fff;
+}
+.message--form button:hover{
+    cursor: pointer;
+}
