@@ -5,211 +5,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="stylesgame.css">
+    <link rel="stylesheet" href="src/css/colors.css">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
     <title>derlansilva</title>
 </head>
 
 <body>
-
-    <div class="container">
-        <header>
-            <div class="header--left">
-                <div class="header--profile">
-                    <div class="header--photo">
-                        <img src="https://avatars.githubusercontent.com/u/49037773?v=4" />
-                    </div>
-                    <div class="header--name">derlan silva</div>
-                </div>
+    <!--Main container start-->
+    <div class="main-container">
+        <!--Aside start-->
+        <div class="aside"> 
+            <div class="logo">
+                <a href="#"><span>A</span>tlas</a>
             </div>
-
-
-            <div class="header--right">
-
-                <div class="navigation">
-                    <ul>
-                        <li class="list  home active">
-                            <a href="#">
-                                <div class="icon">
-                                    <ion-icon name="home-outline"></ion-icon>
-                                </div>
-                                <div class="text">Home</div>
-                            </a>
-                        </li>
-
-                        <li class="list contact">
-                            <a href="#">
-                                <div class="icon">
-                                    <ion-icon name="call-outline"></ion-icon>
-                                </div>
-                                <div class="text">Contact</div>
-                            </a>
-                        </li>
-
-                        <li class="list project">
-                            <a href="#">
-                                <div class="icon">
-                                    <ion-icon name="code-outline"></ion-icon>
-                                </div>
-                                <div class="text">Projects</div>
-                            </a>
-                        </li>
-
-                        <li class="list message">
-                            <a href="#">
-                                <div class="icon">
-                                    <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-                                </div>
-                                <div class="text">Messages</div>
-                            </a>
-                        </li>
-
-                        <li class="list profile">
-                            <a href="#">
-                                <div class="icon">
-                                    <ion-icon name="person-outline"></ion-icon>
-                                </div>
-                                <div class="text">About</div>
-                            </a>
-                        </li>
-
-
-                    </ul>
-                </div>
-
+            <div class="nav-toggler">
+                <span></span>
             </div>
-        </header>
-
-
-        <div class="content">
-            <div class="content--home home">
-                <div class="content--hello">Hi, I`m Derlan Silva ,</div>
-                <div class="content--hello">Back-end developer</div>
-                <div class="text-reveal">
-                    <div class="animation--read">
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="content--contact contact" style="display: none;">
-                <div class="contact--content">Hello , this is contact page</div>
-            </div>
-
-            <div class="content--project project" style="display: none;">
-                
-                    <div class="project--text">My Projects</div>
-                    <section class="content--list">
-                        <div class="content--game">
-                            <div class="list--title">
-
-                                <img class="content--img" src="./img/background.jpg" alt="" srcset="">
-                            </div>
-                        </div>
-                        <div class="content--game">
-                            game
-                        </div>
-                        <div class="content--game">
-                            game
-                        </div>
-                        <div class="content--game">
-                            game
-                        </div>
-                        <div class="content--game">
-                            game
-                        </div>
-                        <div class="content--game">
-                            game
-                        </div>
-                        <div class="content--game">
-                            game
-                        </div>
-                        <div class="content--game">
-                            game
-                        </div>
-                    </section>
-                
-            </div>
-
-            <div class="content--message message" style="display: none;">
-                
-                    <div class="message--content">
-                        deixe sua mensagem aqui
-                        <form class="message--form" action="">
-                            <input type="email" placeholder="digite seu email"/>
-                            <input type="email" placeholder="digite seu Nome"/>
-                            <textarea name="" id="" cols="30" rows="10">
-
-                            </textarea>
-
-                            <button type="submit">Enviar</button>
-                        </form>
-                    </div>
-                
-            </div>
-
-            <div class="content--profile profile" style="display: none;">
-                    <div class="profile--content">
-                        <div class="profile--image">
-                            <div class="profile--img">
-                                <img class="profile--photo" src="https://avatars.githubusercontent.com/u/49037773?v=4" alt="" srcset="">
-                            </div>
-                        </div>
-                        <div class="profile--biograpy">
-                            Meu nome é Joderlan, sou um profissional com alguns anos de experiência no 
-                            comércio e Logistica, e atualmente estou fazendo uma migração de carreira
-                             para a área de Tecnologia da Informação. Com este intuito,
-                             atualmente estou cursando análise e desenvolvimento de sistemas pelo 
-                             Instituto Federal do Paraná , e estou em busca de uma primeira 
-                             oportunidade na área Tecnologia.
-                            Para mim, é importante acima de tudo ser verdadeiro e íntegro. 
-                            Ter autonomia para expor ideias criativas e amarrá-las aquilo que se 
-                            espera de você. Respeitar as pessoas, valorizar o trabalho em conjunto,
-                             até porque trabalho em equipe é o elo que sustenta qualquer organização.
-                              Além disso, acredito que apreciar opiniões e ouvir com atenção é 
-                              importantíssimo, pois isso mostra o quanto você estima alguém. 
-                            O que norteia minha conduta é dar um propósito aquilo que faço,
-                             enxergar um significado importante naquilo que levanto para fazer
-                              todos os dias, e aprender o que é preciso aprender. Acredito que 
-                              é muito importante e inovador o trabalho que define habilidades 
-                              comportamentais, as soft skills. E para mim, empresas que buscam 
-                              ou tem o foco de desenvolver, aprimorar ou descobrir, através do
-                               incentivo a autoanálise dos seus participantes, são diferenciadas.
-                            Coloco-me desde já a disposição para uma eventual entrevista e possível contratação. 
-                            Agradeço antecipadamente a apreciação ao meu currículo.
-                            
-    
-                        </div>
-                    </div>
-                
-            </div>
-
+            <ul class="nav">
+                <li><a href="" class="active"> <i class="fa fa-home"></i> Home</a></li>
+                <li><a href=""> <i class="fa fa-user"></i>About </a></li>
+                <li><a href=""> <i class="fa fa-list"></i> Services</a></li>
+                <li><a href=""> <i class="fa fa-briefcase"></i>Portfolio</a></li>
+                <li><a href=""> <i class="fa fa-comments"></i>Contacts</a></li>
+            </ul>
         </div>
+        <!--Aside end-->
+
+        <!--Main content start-->
+        <div class="main-content">
+            <!--Home select start-->
+            <section class="home section">
+                <div class="container">
+                     <div class="row">
+                        <div class="home-info padd-15">
+                            <h3 class="hello">Hello , My name is <span class="name">Derlan Silva</span></h3>
+                            <h3 class="my-profession">I´m a <span class="typing">Web developer</span></h3>
+                            <p>I´m a backend developer with extensive experience for over 4 years </p>
+                            <a href="#contact" class="btn hire-me">More about me </a>
+                        </div>
+                        <div class="home-img padd-15">
+                            <img src="./src/img/derlanphoto.png" alt="" srcset="">
+                        </div>
+                     </div>
+                </div>
+            </section>
+            <!--Home select end -->
+        </div>
+        <!--Main content end-->
     </div>
-
- 
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-    <script src="./src/javascript/controler/index.js"></script>
-    <script src="./src/javascript/pageController.js"></script>
-
-    <script>
-        let list = document.querySelectorAll('.list')
-
-        function activeList() {
-            list.forEach(item => {
-                item.classList.remove('active')
-
-                this.classList.add('active')
-            })
-        }
-
-        list.forEach((item) => {
-            item.addEventListener('click', activeList)
-        })
-    </script>
+    <!--Main container end-->
+    <script src="src/js/index.js"></script>
+    <script src="src/js/pageController.js"></script>
 </body>
 
 </html>
