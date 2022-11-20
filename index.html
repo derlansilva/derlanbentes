@@ -12,9 +12,9 @@
     <!--   STYLE SWITCHER   -->
     <link rel="stylesheet" href="src/css/colors/color-1.css" class="alternate-style" title="color-1" >
     <link rel="stylesheet" href="src/css/colors/color-2.css" class="alternate-style" title="color-2"  disabled>
-    <link rel="stylesheet" href="src/css/colors/color-3.css" class="alternate-style" title="color-3" >
-    <link rel="stylesheet" href="src/css/colors/color-4.css" class="alternate-style" title="color-4" >
-    <link rel="stylesheet" href="src/css/colors/color-5.css" class="alternate-style" title="color-5" >
+    <link rel="stylesheet" href="src/css/colors/color-3.css" class="alternate-style" title="color-3" disabled >
+    <link rel="stylesheet" href="src/css/colors/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="src/css/colors/color-5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="./src/css/style-switcher.css">
     <title>derlansilva</title>
 </head>
@@ -31,11 +31,11 @@
                 <span></span>
             </div>
             <ul class="nav">
-                <li><a href="" class="active"> <i class="fa fa-home"></i> Home</a></li>
-                <li><a href=""> <i class="fa fa-user"></i>About </a></li>
-                <li><a href=""> <i class="fa fa-list"></i> Services</a></li>
-                <li><a href=""> <i class="fa fa-briefcase"></i>Portfolio</a></li>
-                <li><a href=""> <i class="fa fa-comments"></i>Contacts</a></li>
+                <li><a href="#home" class="active"> <i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#about"> <i class="fa fa-user"></i>About </a></li>
+                <li><a href="#services"> <i class="fa fa-list"></i> Services</a></li>
+                <li><a href="#portfolio"> <i class="fa fa-briefcase"></i>Portfolio</a></li>
+                <li><a href="#contact"> <i class="fa fa-comments"></i>Contacts</a></li>
             </ul>
         </div>
         <!--ASIDE END-->
@@ -43,7 +43,7 @@
         <!--MAIN CONTENT START-->
         <div class="main-content">
             <!--HOME SECTION START-->
-            <section class="home section">
+            <section class="home section" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
@@ -60,7 +60,7 @@
             </section>
             <!--HOME SECTION END -->
             <!--=======ABOUT SELECTION START======-->
-            <section class="about section">
+            <section class="about section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -251,7 +251,7 @@
             <!--=======ABOUT SELECTION END======-->
 
             <!--=======SERVICES SELECTION START======-->
-            <section class="service section">
+            <section class="service section" id="services">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -337,7 +337,7 @@
             <!--=======SERVICES SELECTION END======-->
 
             <!-- ====== PORTIFOLIO SECTION START ======= -->
-            <section class="portfolio section">
+            <section class="portfolio section" id="portfolio">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -404,7 +404,7 @@
             </section>
             <!-- ====== PORTIFOLIO SECTION END ======= -->
             <!-- ====== CONTACT SECTION START ======= -->
-            <section class="contact section">
+            <section class="contact section" id="contact">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padd-15">
@@ -499,7 +499,7 @@
             </div>  
 
             <div class="day-night s-icon"> 
-                <i class="fas fa-moon"></i>
+                <i class="fas"></i>
             </div>
 
 
@@ -513,8 +513,10 @@
             </div>
         </div>
         <!-- STYLE SWITCHER END -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
         <script src="src/js/index.js"></script>
         <script src="src/js/pageController.js"></script>
+        <script src="./src/js/function.js"></script>
 </body>
 
 </html>
