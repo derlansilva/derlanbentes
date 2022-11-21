@@ -721,13 +721,24 @@ h3.my-profession{
         flex: 0 0 50%;
         max-width: 50%;
     }
+    .home .row{
+    
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
   
     .home .home-info{
+        margin-top: 80px;
         flex: 0 0 100%;
         max-width: 100%;
+    
     }
     .home .home-img{
-        display: none;
+        max-width: 100%;
+        margin-top: 100px;
+        flex: 0 0 100%;
+      
     }
 
     .aside .nav-toggler{
@@ -745,6 +756,10 @@ h3.my-profession{
         justify-content: center;
         padding: 4px 0 0 12px;
         margin-top: 45px;
+    }
+    .about .row{
+        display: flex;
+        flex-direction: column;
     }
 }
 
