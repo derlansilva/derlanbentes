@@ -5,6 +5,7 @@ class Controller {
         this.load()
         this.styleSwitcher()
         this.darkTheme()
+        //this.showNav()
     }
 
     load(){
@@ -38,5 +39,28 @@ class Controller {
             }
         })
     }
+    /*
+    showNav(){
+       
+        const nav = document.querySelector('.nav'),
+            navList = nav.querySelectorAll('li'),
+            totalNavList = navList.length;
+
+            for(let i = 0  ; i<totalNavList; i++){
+                const a = navList[i].querySelector('a')
+                a.addEventListener('click' , function(){
+                    for(let x = 0 ; x<totalNavList ; x++){
+                        navList[x].querySelector('a').classList.remove('active')
+                    }
+
+                    this.classList.add('active')
+                    
+                })  
+            }
+    }
+
+    showSection(){
+        console.log("element test")
+    }*/
 
 }
