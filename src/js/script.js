@@ -29,13 +29,13 @@ const nav = document.querySelector(".nav"),
         const a = navList[i].querySelector('a')
  
         a.addEventListener("click" , function(){
-            for(let i=0; i <totalSection ; i++){
-                allSection[i].classList.remove("back-section")
-            }
+            
+            removeBackSection()
 
             for(let x = 0 ; x<totalNavList ; x++){
                 if(navList[x].querySelector("a").classList.contains('active')){
-                    allSection[x].classList.add("back-section")
+                    //allSection[x].classList.add("back-section")
+                    addBackSection(x)
                 }
                 navList[x].querySelector('a').classList.remove('active')
             }
@@ -56,6 +56,27 @@ function showSection(element){
    
 }
 
+function updateNav(element){
+    console.log(element.getAttribute('href').split('#')[1])
+    for(let i = 0 ; i<totalNavList; i++){
+        navList[i].querySelector("a").classList.remove("active")
+        const target = element.getAttribute('href').split('#')[1]
+        if(target === navList[i].querySelector('a').getAttribute("href").split("#")[1]){
+            navList[i].querySelector("a").classList.add("active")
+        }
+    }
+
+   
+}
+
+document.querySelector(".hire-me").addEventListener("click" , function(){
+    const sectionIndex = this.getAttribute("data-section-index")
+    showSection(this)
+    updateNav(this)
+    removeBackSection()
+    addBackSection(sectionIndex)
+})
+
 const navTogglerBtn = document.querySelector(".nav-toggler"),
     aside = document.querySelector('.aside');
 
@@ -72,3 +93,18 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
             allSection[i].classList.toggle("open")
         }
     }
+
+
+//====REMOVER O FUNDO QUANDO TROCAR TELA 
+
+function removeBackSection(){
+    for(let i=0; i <totalSection ; i++){
+        allSection[i].classList.remove("back-section")
+    }
+}
+
+//=====ADCIONAR UM FUNDO ANTES DE TROCAR A TELA 
+
+function addBackSection(index){
+    allSection[index].classList.add("back-section")
+}

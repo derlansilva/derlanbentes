@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;500;600;700&display=swap');
 :root{
+    
     --bg-black-900: #f2f2fc; 
     --bg-black-100: #fdf9ff;
     --bg-black-50: #e8dfec;
@@ -237,6 +238,7 @@ ul{
     background: var(--skin-color);
     display: inline-block;
     position: relative;
+    transition: all 1s ease;
 }
 .aside .nav-toggler.open span{
     background-color: transparent;
@@ -250,10 +252,12 @@ ul{
     position: absolute;
     top: -6px;
     left: 0;
+    transition: all 1s ease;
 }
 .aside .nav-toggler.open span::before{
     transform: rotate(45deg);
     top: 0;
+    transition: all 1s ease;
     
 }
 .aside .nav-toggler span::after{
@@ -264,10 +268,13 @@ ul{
     position: absolute;
     top: 6px;
     left: 0;
+    transition: all 1s ease;
+
 }
 .aside .nav-toggler.open span::after{
     transform: rotate(-45deg);
     top: 0;
+    transition: all 1s ease;
 }
 .aside .nav{
     margin-top: 50px;
@@ -747,6 +754,9 @@ h3.my-profession{
 /*  RESPONSIVE   */
 
 @media (max-width:1199px){
+    .section .container{
+        padding-top: 70px;
+    }
     .aside{
         left: -270px;
 
@@ -759,10 +769,12 @@ h3.my-profession{
     .aside .nav-toggler{
         display: flex;
         left: 30px;
+        background: red;
     }
     .aside .nav-toggler.open{
         transition: all 0.5s ease;
-        left: 300px;
+        left: 220px;
+        
     }
     .section{
         left: 0;
