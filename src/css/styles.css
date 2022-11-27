@@ -238,7 +238,7 @@ ul{
     background: var(--skin-color);
     display: inline-block;
     position: relative;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 .aside .nav-toggler.open span{
     background-color: transparent;
@@ -252,12 +252,12 @@ ul{
     position: absolute;
     top: -6px;
     left: 0;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 .aside .nav-toggler.open span::before{
     transform: rotate(45deg);
     top: 0;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
     
 }
 .aside .nav-toggler span::after{
@@ -268,13 +268,13 @@ ul{
     position: absolute;
     top: 6px;
     left: 0;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 
 }
 .aside .nav-toggler.open span::after{
     transform: rotate(-45deg);
     top: 0;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 .aside .nav{
     margin-top: 50px;
