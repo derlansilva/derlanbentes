@@ -168,7 +168,7 @@ ul{
     top: 0;
     padding: 30px;
     height: 100%;
-    border-right: 1px solid var(--bg-black-50);
+    border-right: 1px solid var(---black-50);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,7 +347,7 @@ h3.my-profession{
     text-align: center;
     position: relative;
 }
-/*
+
 .home-img::after{
     content: '';
     position: absolute;
@@ -355,8 +355,9 @@ h3.my-profession{
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 20px;
+    right: 10px;
     bottom: -40px;
+    border-radius: 5px;
 }
 .home-img::before{
     content: '';
@@ -365,15 +366,18 @@ h3.my-profession{
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: 20px;
+    left: 10px;
     top: -40px;
+
+    border-radius: 5px;
 }
-*/
+
 .home .home-img img{
     height: 400px;
     margin: auto    ;
     border-radius: 5px;
-    box-shadow: 8px 10px 30px var(--skin-color);
+    
+    box-shadow: var(--skin-color) 0px 5px 15px;
 }
 
 
@@ -799,7 +803,7 @@ h3.my-profession{
         max-width: 50%;
     }
     .home .row{
-        position:absolute ;
+        
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -837,6 +841,27 @@ h3.my-profession{
         padding: 4px 0 0 12px;
         margin-top: 45px;
     }
+    
+.home-img::after{
+    content: '';
+    position: absolute;
+    height: 80px ;
+    width: 80px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    right: -20px;
+    bottom: -20px;
+}
+.home-img::before{
+    content: '';
+    position: absolute;
+    height: 80px ;
+    width: 80px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    left: -10px;
+    top: 10px;
+}
     .about .row{
         width: 100%;
         display: flex;
