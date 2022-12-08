@@ -10,7 +10,7 @@
 }
 body.dark{
     
-      --bg-black-900: #f2f2fc; 
+    --bg-black-900: #f2f2fc; 
     --bg-black-100: #fdf9ff;
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
@@ -322,6 +322,7 @@ ul{
         transform: scale(1);
     }
 }
+
 .home-info{
     flex: 0 0 60%;
     max-width: 60%;
@@ -383,6 +384,16 @@ h3.my-profession{
     top: -40px;
 
     border-radius: 5px;
+    animation: animationimagebefore 2s 2s ease;
+}
+
+@keyframes animationimagebefore{
+    0%{
+        transform: translateX(-200);
+    }
+    100%{
+        transform:translateX(0)
+    }
 }
 
 .home .home-img img{

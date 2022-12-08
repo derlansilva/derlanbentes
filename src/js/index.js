@@ -6,6 +6,15 @@ class Controller {
         this.styleSwitcher()
         this.darkTheme()
         //this.showNav()
+        this.modal()
+    }
+
+    modal(){
+        const item = document.querySelectorAll('.portfolio-img')
+
+        item.addEventListener('click' , ()=>{
+            console.log("voce clicou")
+        })
     }
 
     load(){
