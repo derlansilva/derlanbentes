@@ -172,7 +172,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    z-index: 101;
     transition: all 0.3s ease;
 }
 
@@ -285,7 +285,6 @@ ul{
 
 .aside .nav li{
     margin-bottom: 20px;
-
     display: block;
 }
 
@@ -354,7 +353,8 @@ h3.my-profession{
 .home .home-img{
     flex: 0 0 40%;
     max-width: 40%;
-    height: 100%;
+    height: 500px;
+  
     text-align: center;
     position: relative;
     animation:  slide-top 0.5s 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -367,8 +367,7 @@ h3.my-profession{
     position: absolute;
     height: 80px ;
     width: 80px;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
+
     right: 10px;
     bottom: -40px;
     border-radius: 5px;
@@ -378,8 +377,7 @@ h3.my-profession{
     position: absolute;
     height: 80px ;
     width: 80px;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
+
     left: 10px;
     top: -40px;
 
@@ -397,12 +395,10 @@ h3.my-profession{
 }
 
 .home .home-img img{
-    height: 400px;
-    margin: auto    ;
-    border-radius: 5px;
+    height: 100%;
     
-
-    box-shadow: var(--skin-color) 0px 2px 8px 0px;
+    border-radius: 5px;
+    left: 0;
 }
 
 
@@ -940,4 +936,26 @@ h3.my-profession{
         flex: 0 0 100%;
         max-width: 100%;
     }
+}
+.featured{
+    background-image: url("../img/about.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.featured--vetical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top , var(--bg-black-900) 2% , transparent 90%);
+}
+.featured--horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right , var(--bg-black-900) 2% , transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 150px;
+    padding-top: 70px;
 }
