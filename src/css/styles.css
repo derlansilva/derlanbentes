@@ -181,11 +181,7 @@ ul{
     opacity: 0.8;
     transition: all 0.5s ease;
 }
-.aside:hover{
-    width: 200px;
-    transition: all 0.5s ease;
 
-}
 
 .aside .nav-toggler{
     height: 40px;
@@ -267,16 +263,22 @@ ul{
 
 .aside .nav li{
     margin-bottom: 30px;
-    display: block;
+    
     color: var(--text-black-900);
     cursor: pointer;
+    width: 100%;
+    display: flex;
+    
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .aside .nav li a {
     font-size: 15px;
     font-weight: 600 ;
     display: block;
-    border-bottom: 1px solid var(--bg-black-50);
+    
     color: var(--text-black-900);
     padding: 5px 15px ;
     display: none;
@@ -853,7 +855,7 @@ h3.my-profession{
     .aside.open{
         transition: all 0.5s ease;
         left: 0;
-        
+        width: 100%;
     }
 
     .aside .nav-toggler{
@@ -862,7 +864,7 @@ h3.my-profession{
     }
     .aside .nav-toggler.open{
         transition: all 0.5s ease;
-        left: 220px;
+       
     }
      .aside .nav-toggler{
         height: 40px;
@@ -884,7 +886,7 @@ h3.my-profession{
         left: 0;
     }
     .section.open{
-        left: 270px;
+        left: 470px;
     }
     .about .container .row{
       

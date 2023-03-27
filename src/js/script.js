@@ -1,3 +1,4 @@
+
 function setActiveStyle(color){
     const alternateStyles = document.querySelectorAll('.alternate-style')
 
@@ -57,7 +58,7 @@ function showSection(element){
 }
 
 function updateNav(element){
-    console.log(element.getAttribute('href').split('#')[1])
+  
     for(let i = 0 ; i<totalNavList; i++){
         navList[i].classList.remove("active")
         const target = element.getAttribute('href').split('#')[1]
