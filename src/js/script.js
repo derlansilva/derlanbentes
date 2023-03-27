@@ -26,18 +26,18 @@ const nav = document.querySelector(".nav"),
     totalSection = allSection.length
 
     for(let i = 0 ;i<totalNavList;i++){
-        const a = navList[i].querySelector('a')
+        const a = navList[i]
  
         a.addEventListener("click" , function(){
             
             removeBackSection()
 
             for(let x = 0 ; x<totalNavList ; x++){
-                if(navList[x].querySelector("a").classList.contains('active')){
+                if(navList[x].classList.contains('active')){
                     //allSection[x].classList.add("back-section")
                     addBackSection(x)
                 }
-                navList[x].querySelector('a').classList.remove('active')
+                navList[x].classList.remove('active')
             }
             this.classList.add('active')
             showSection(this)
@@ -59,10 +59,10 @@ function showSection(element){
 function updateNav(element){
     console.log(element.getAttribute('href').split('#')[1])
     for(let i = 0 ; i<totalNavList; i++){
-        navList[i].querySelector("a").classList.remove("active")
+        navList[i].classList.remove("active")
         const target = element.getAttribute('href').split('#')[1]
-        if(target === navList[i].querySelector('a').getAttribute("href").split("#")[1]){
-            navList[i].querySelector("a").classList.add("active")
+        if(target === navList[i].getAttribute("href").split("#")[1]){
+            navList[i].classList.add("active")
         }
     }
 

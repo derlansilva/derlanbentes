@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 :root{
     --bg-black-900: #151515; 
     --bg-black-100: #222222;
@@ -41,13 +43,14 @@ ul{
     list-style: none;
 }
 .section{
+
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
     padding: 0 30px;
     opacity: 1;
     position: fixed;
-    left: 270px;
+    left: 200px;
     top: 0;
     right: 0;
     bottom: 0;
@@ -161,7 +164,7 @@ ul{
 }
 /*ASIDE*/
 .aside{
-    width: 270px;
+    width: 20px;
     background: var(--bg-black-100);
     position: fixed;
     left: 0;
@@ -174,50 +177,16 @@ ul{
     align-items: center;
     z-index: 101;
     transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+.aside:hover{
+    width: 200px;
+    transition: all 0.5s ease;
+
 }
 
-.aside .logo{
-    position: absolute;
-    top: 50px;
-    font-size: 30px;
-    text-transform: capitalize;
-}
-.aside .logo a {
-    color: var(--text-black-900);
-    font-weight: 700;
-   
-    padding: 15px 20px;
-    font-size: 30px;
-    letter-spacing: 5px;
-    position: relative;
-}
-
-.aside .logo a span{
-    font-family: 'Clicker Script' , cursive;
-    font-size: 40px;
-}
-
-.aside .logo a::before{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-bottom: 5px solid var(--skin-color);
-    border-left: 5px solid var(--skin-color);
-    bottom: 0;
-    left: 0;
-}
-
-.aside  .logo a::after{
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-top: 5px solid var(--skin-color);
-    border-right: 5px solid var(--skin-color);
-    top: 0;
-    right:  0;
-}
 .aside .nav-toggler{
     height: 40px;
     width: 45px;
@@ -232,6 +201,7 @@ ul{
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    
 }
 
 .aside .nav-toggler span{
@@ -280,24 +250,53 @@ ul{
 }
 .aside .nav{
     margin-top: 50px;
+}
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+    text-transform: uppercase;
     
 }
 
+.aside span{
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+
 .aside .nav li{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: block;
+    color: var(--text-black-900);
+    cursor: pointer;
 }
 
 .aside .nav li a {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600 ;
     display: block;
     border-bottom: 1px solid var(--bg-black-50);
     color: var(--text-black-900);
     padding: 5px 15px ;
+    display: none;
+}
+
+.aside .nav li a h5{
+    font-size: 15px;
+    font-weight: 600 ;
+    display: block;
+    border-bottom: 1px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    padding: 5px 15px ;
+    
 }
 
 .aside .nav li a.active{
+    color : var(--skin-color);
+}
+
+.aside .nav li.active{
     color : var(--skin-color);
 }
 
@@ -325,6 +324,9 @@ ul{
 .home-info{
     flex: 0 0 60%;
     max-width: 60%;
+
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
     animation:  slide-top  0.5s  0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -347,8 +349,9 @@ h3.my-profession{
 }
 .home-info p {
     margin-bottom: 70px;
-    font-size: 20px;
+    font-size: 15px;
     color: var(--text-black-700);
+    opacity: 0.8;
 }
 .home .home-img{
     flex: 0 0 40%;
@@ -406,7 +409,8 @@ h3.my-profession{
 .about .about-content{
      flex:  0 0 100% ;
      max-width: 100%;
-
+     font-family: 'Roboto', sans-serif;
+     opacity: 0.9;
 }
 .about .about-content .about-row{
     display: flex;
@@ -787,6 +791,54 @@ h3.my-profession{
     padding: 0 50px;
 }
 
+
+.featured{
+    background-image: url("../img/about.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.featured--vetical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top , var(--bg-black-900) 2% , transparent 90%);
+}
+.featured--horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right , var(--bg-black-900) 2% , transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 150px;
+    padding-top: 70px;
+}
+
+.about--featured{
+    background-image: url("../img/about2.png");
+    background-size: cover;
+    width: 450px;
+    height: 450px;
+}
+.about--featured--vetical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top , var(--bg-black-900) 2% , transparent 90%);
+}
+.about--featured--horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right , var(--bg-black-900) 2% , transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-bottom: 150px;
+    padding-top: 70px;
+}
+
+
 /*  RESPONSIVE   */
 
 @media (max-width:1199px){
@@ -857,7 +909,7 @@ h3.my-profession{
         max-width: 50%;
     }
     .home .row{
-      
+        
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -890,12 +942,14 @@ h3.my-profession{
 
     .home .home-img{
         max-width: 100%;
+        min-height: 100%;
         margin-top: 30px;
         flex: 0 0 100%;
+
       
-    } .home .home-img img{
+    } 
+    .home .home-img img{
        margin-top: 30px;
-      
     }
 
     .aside .nav-toggler{
@@ -915,11 +969,39 @@ h3.my-profession{
         margin-top: 45px;
     }
     
-    .home-img::after{
-        display: none;
+    .featured{
+        background-image: url("../img/about.png");
+        background-size: cover;
+        width: 100%;
+        height: 400px;
     }
-    .home-img::before{
-        display: none;
+    .featured--vetical{
+    
+        background: linear-gradient(to top , var(--bg-black-900) 2% , transparent 90%);
+    }
+    .featured--horizontal{
+
+        background: linear-gradient(to right , var(--bg-black-900) 2% , transparent 70%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about--featured{
+        background-image: url("../img/about.png");
+        background-size: cover;
+        width: 100%;
+        height: 400px;
+    }
+    .about--featured--vetical{
+    
+        background: linear-gradient(to top , var(--bg-black-900) 2% , transparent 90%);
+    }
+    .about--featured--horizontal{
+
+        background: linear-gradient(to right , var(--bg-black-900) 2% , transparent 70%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
 }
@@ -936,26 +1018,5 @@ h3.my-profession{
         flex: 0 0 100%;
         max-width: 100%;
     }
-}
-.featured{
-    background-image: url("../img/about.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-.featured--vetical{
-    width: inherit;
-    height: inherit;
-    background: linear-gradient(to top , var(--bg-black-900) 2% , transparent 90%);
-}
-.featured--horizontal{
-    width: inherit;
-    height: inherit;
-    background: linear-gradient(to right , var(--bg-black-900) 2% , transparent 70%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 30px;
-    padding-bottom: 150px;
-    padding-top: 70px;
+
 }
