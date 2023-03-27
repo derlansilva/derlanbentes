@@ -968,6 +968,10 @@ h3.my-profession{
         padding: 4px 0 0 12px;
         margin-top: 45px;
     }
+    .aside .nav li a {
+       
+        display: block;
+    }
     
     .featured{
         background-image: url("../img/about.png");
