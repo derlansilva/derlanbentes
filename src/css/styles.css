@@ -27,7 +27,16 @@ body {
     background: var(--bg-black-900);
 }
 
-*{
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+  canvas {
+    width:100vw;
+    height:100vh;
+  }
+
+* , *::after , *::before{
     margin: 0;
     padding: 0;
     outline: none; 
@@ -35,6 +44,8 @@ body {
     box-sizing : border-box;
     
 }
+
+
 
 ::before , ::after{
     box-sizing: border-box;
@@ -164,12 +175,12 @@ ul{
 }
 /*ASIDE*/
 .aside{
-    width: 20px;
+    width: 50px;
     background: var(--bg-black-100);
     position: fixed;
     left: 0;
     top: 0;
-    padding: 30px;
+    
     height: 100%;
     border-right: 1px solid var(---black-50);
     display: flex;
@@ -180,8 +191,13 @@ ul{
     font-family: 'Roboto', sans-serif;
     opacity: 0.8;
     transition: all 0.5s ease;
+    overflow-x: hidden;
+    transition: 0.5s all ease;
 }
 
+.aside:hover{
+    width: 200px;
+}
 
 .aside .nav-toggler{
     height: 40px;
@@ -244,8 +260,12 @@ ul{
     top: 0;
     transition: all 0.5s ease;
 }
+
+
+/*------  Nav navgation -------*/
 .aside .nav{
     margin-top: 50px;
+    width: 100%;
 }
 .nav-item{
     position: relative;
@@ -260,28 +280,24 @@ ul{
     text-transform: uppercase;
 }
 
-
 .aside .nav li{
-    margin-bottom: 30px;
-    
+    margin-bottom: 20px;
     color: var(--text-black-900);
     cursor: pointer;
     width: 100%;
     display: flex;
-    
-    text-align: center;
     align-items: center;
-    justify-content: center;
 }
-
-.aside .nav li a {
+.aside .nav li i{
+    margin-left: 15px;
+}
+.aside .nav li span {
     font-size: 15px;
-    font-weight: 600 ;
+    font-weight: 500 ;
     display: block;
-    
-    color: var(--text-black-900);
+    margin-left: 10px;
     padding: 5px 15px ;
-    display: none;
+   
 }
 
 .aside .nav li a h5{
@@ -294,12 +310,15 @@ ul{
     
 }
 
-.aside .nav li a.active{
+.aside .nav li span.active{
     color : var(--skin-color);
 }
 
 .aside .nav li.active{
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
     color : var(--skin-color);
+    background: var(--bg-black-900); 
 }
 
 .aside .nav li a i {
@@ -354,6 +373,7 @@ h3.my-profession{
     font-size: 15px;
     color: var(--text-black-700);
     opacity: 0.8;
+    
 }
 .home .home-img{
     flex: 0 0 40%;
@@ -387,17 +407,19 @@ h3.my-profession{
     top: -40px;
 
     border-radius: 5px;
-    animation: animationimagebefore 2s 2s ease;
+    animation: slide-image-top 0.5s 0.30s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@keyframes animationimagebefore{
-    0%{
-        transform: translateX(-200);
+@keyframes slide-image-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
     }
-    100%{
-        transform:translateX(0)
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
     }
-}
+  }
 
 .home .home-img img{
     height: 100%;
@@ -418,7 +440,6 @@ h3.my-profession{
     display: flex;
 }
 .about .about-content .about-row img{
-    box-shadow: var(--skin-color) 0px 2px 8px 0px;
     animation:  slide-top 0.5s 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -459,7 +480,7 @@ h3.my-profession{
     padding: 10px 0 ;
     font-size: 16px;
     color: var(--text-black-900);
-    border-bottom: 1px solid var(--bg-black-50);
+    
 }
 .about .about-content .personal-info .info-item p span{
     font-weight: 400;
@@ -855,7 +876,7 @@ h3.my-profession{
     .aside.open{
         transition: all 0.5s ease;
         left: 0;
-        width: 100%;
+        width: 80%;
     }
 
     .aside .nav-toggler{
@@ -975,6 +996,7 @@ h3.my-profession{
         display: block;
     }
     
+    
     .featured{
         background-image: url("../img/about.png");
         background-size: cover;
@@ -1026,3 +1048,7 @@ h3.my-profession{
     }
 
 }
+
+
+/*background cub*/
+

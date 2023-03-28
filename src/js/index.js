@@ -12,9 +12,7 @@ class Controller {
     modal(){
         const item = document.querySelectorAll('.portfolio-img')
 
-        item.addEventListener('click' , ()=>{
-            console.log("voce clicou")
-        })
+        
     }
 
     load(){
