@@ -14,8 +14,17 @@ function setActiveStyle(color){
 
 
 var typed = new Typed(".typing" , {
-strings:["         ", "Back-end Developer" , "Node.js" ,"Python","Django" , "Java" , "Front-end Developer" , "React.js" ,"Javascript"],
-    typeSpeed: 100, 
+strings:[
+    "         ", 
+    '<i class="fa fa-code"></i> Back-end Developer' , 
+    '<i class="fab fa-node-js"></i>  Node.js' ,
+    '<i class="fab fa-python"></i>  Python',
+    "Django" , 
+    '<i class="fab fa-java"></i>   Java' , 
+    '<i class="fa fa-laptop-code"></i> Front-end Developer' , 
+    '<i class="fab fa-react"></i>  React.js' ,
+    "Javascript"],
+    typeSpeed: 150, 
     BackSpeed:200,
     loop: true
 })

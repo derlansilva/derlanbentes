@@ -31,11 +31,6 @@ body {
     margin: 0;
     overflow: hidden;
   }
-  canvas {
-    width:100vw;
-    height:100vh;
-  }
-
 * , *::after , *::before{
     margin: 0;
     padding: 0;
@@ -54,14 +49,13 @@ ul{
     list-style: none;
 }
 .section{
-
     background: var(--bg-black-900);
     min-height: 100vh;
     display: block;
     padding: 0 30px;
     opacity: 1;
     position: fixed;
-    left: 200px;
+    left: 150px;
     top: 0;
     right: 0;
     bottom: 0;
@@ -110,9 +104,11 @@ ul{
     margin: auto;
 
 }
+
 .section .container{
     padding-top: 60px;
     padding-bottom: 70px;
+    width: 100%;
 }
 
 .section-title{
@@ -175,7 +171,7 @@ ul{
 }
 /*ASIDE*/
 .aside{
-    width: 50px;
+    width: 55px;
     background: var(--bg-black-100);
     position: fixed;
     left: 0;
@@ -193,10 +189,11 @@ ul{
     transition: all 0.5s ease;
     overflow-x: hidden;
     transition: 0.5s all ease;
+    
 }
 
 .aside:hover{
-    width: 200px;
+    width: 150px;
 }
 
 .aside .nav-toggler{
@@ -287,6 +284,8 @@ ul{
     width: 100%;
     display: flex;
     align-items: center;
+    margin-left: 5px;
+    
 }
 .aside .nav li i{
     margin-left: 15px;
@@ -630,7 +629,6 @@ h3.my-profession{
     margin-bottom: 30px;
     flex: 0 0 33.33%;
     max-width: 33.33%;
-
 }
 
 .service .service-item-inner{
@@ -640,6 +638,7 @@ h3.my-profession{
     padding: 30px 15px ;
     text-align: center;
     transition: all 0.3s ease;
+    min-height: 300px;
 }
 .service .service-item .service-item-inner:hover{
     box-shadow: 0 0 20px rgba(48,46 ,77 ,0.15);
