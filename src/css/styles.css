@@ -203,14 +203,12 @@ ul{
     font-family: 'Roboto', sans-serif;
     opacity: 0.8;
     transition: all 0.5s ease;
-    overflow-x: hidden;
-    transition: 0.5s all ease;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.aside:hover{
-    width: 150px;
-}
+
 
 .aside .nav-toggler{
     height: 40px;
@@ -294,16 +292,21 @@ ul{
 }
 
 .aside .nav li{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: var(--text-black-900);
     cursor: pointer;
-    width: 100%;
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     margin-left: 5px;
-
+    width: 50px;
     transition: all ease 0.5s;
     
+}
+.aside .nav li:hover{
+    width: 150px;
+    background: var(--bg-black-100);
+    border-radius: 20px;
 }
 .aside .nav li i{
     margin-left: 15px;
@@ -336,6 +339,10 @@ ul{
     border-top-left-radius: 50px;
     color : var(--skin-color);
     background: var(--bg-black-900); 
+}
+.aside .nav li.active:hover{
+    background: var(--bg-black-100);
+    border-radius: 20px;
 }
 
 .aside .nav li a i {
@@ -429,6 +436,7 @@ h3.my-profession{
 .home .home-icons i:hover{
     background: var(--skin-color);
     color: var(--bg-black-900);
+    opacity: 0.5;
     transform: scale(1.09);
     transition: all 0.5s ease;
 }
