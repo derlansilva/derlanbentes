@@ -27,11 +27,6 @@ body {
     background: var(--bg-black-900);
     overflow-x: hidden;
 }
-
-body {
-    margin: 0;
-    overflow: hidden;
-  }
 * , *::after , *::before{
     margin: 0;
     padding: 0;
@@ -41,9 +36,6 @@ body {
     scroll-behavior: smooth;
     
 }
-
-
-
 ::before , ::after{
     box-sizing: border-box;
 }
@@ -69,7 +61,7 @@ ul{
 }
 .section.back-section{
     z-index: 1;
-    animation: slideLeft 1s ease;
+    animation: slideLeft 0.1s 0.1s ease;
 }
 @keyframes slideleft{
     0%{
@@ -82,34 +74,38 @@ ul{
 .section.active{
     z-index: 2;
     opacity: 1;
-   /*animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;*/
+    /*animation: slideintop 0.5s 0.5s both;*/
 }
-@keyframes scale-in-center {
+
+@keyframes slideintop {
     0% {
-      -webkit-transform: scale(0);
-              transform: scale(0);
+                transform: translateZ(-1400px) translateY(-200px);
+        opacity: 0;
+      }
+      100% {
+                transform: translateZ(0) translateY(0);
+        opacity: 1;
+      }
+}
+.section.remove-back{
+    animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes slide-out-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
       opacity: 1;
     }
     100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      opacity: 1;
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
     }
   }
-  
-
-@keyframes slideSection{
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(0%);
-    }
-}
 .hidden{
     display: none !important;
 }
-
 .padd-15{
     padding-left: 15px;
     padding-right: 15px;
@@ -120,13 +116,11 @@ ul{
     margin: auto;
     
 }
-
 .section .container{
     padding-top: 60px;
     padding-bottom: 70px;
     width: 100%;
 }
-
 .section-title{
     flex:  0 0 100%;
     max-width: 100%;
@@ -164,7 +158,6 @@ ul{
     margin-right: -15px;
     position: relative;
 }
-
 .btn{
     font-size: 16px;
     font-weight: 500;
@@ -177,7 +170,6 @@ ul{
     background: var(--skin-color);
     transition: all 0.3s ease ;
 }
-
 .btn:hover{
     transform: scale(1.05);
 }
@@ -206,23 +198,7 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-@keyframes slide-in-left {
-    0% {
-      -webkit-transform: translateX(-1000px);
-              transform: translateX(-1000px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-  }
-
 
 .aside .nav-toggler{
     height: 40px;
@@ -240,7 +216,6 @@ ul{
     transition: all 0.3s ease;
     
 }
-
 .aside .nav-toggler span{
     height: 3px;
     width: 18px;
@@ -252,7 +227,6 @@ ul{
 .aside .nav-toggler.open span{
     background-color: transparent;
 }
-
 .aside .nav-toggler span::before{
     content: '';
     height: 3px;
@@ -285,41 +259,21 @@ ul{
     top: 0;
     transition: all 0.5s ease;
 }
-
-
 /*------  Nav navgation -------*/
 .aside .nav{
     margin-top: 50px;
     width: 100%;
 }
-.animation-right{
-    animation: slide-in-right 0.9s 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-@keyframes slide-in-right {
-    0% {
-      -webkit-transform: translateX(1000px);
-              transform: translateX(50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1;
-    }
-  }
 .nav-item{
     position: relative;
     top: 12px;
     margin-left: 10px;
     text-transform: uppercase;
-    
 }
-
 .aside span{
     padding-left: 15px;
     text-transform: uppercase;
 }
-
 .aside .nav li{
     margin-bottom: 30px;
     color: var(--text-black-900);
@@ -330,7 +284,6 @@ ul{
     margin-left: 5px;
     width: 50px;
     transition: all ease 0.5s;
-    
 }
 .aside .nav li:hover{
     width: 150px;
@@ -348,7 +301,6 @@ ul{
     padding: 5px 15px ;
    
 }
-
 .aside .nav li a h5{
     font-size: 15px;
     font-weight: 600 ;
@@ -356,13 +308,10 @@ ul{
     border-bottom: 1px solid var(--bg-black-50);
     color: var(--text-black-900);
     padding: 5px 15px ;
-    
 }
-
 .aside .nav li span.active{
     color : var(--skin-color);
 }
-
 .aside .nav li.active{
     border-bottom-left-radius: 50px;
     border-top-left-radius: 50px;
@@ -373,7 +322,6 @@ ul{
     background: var(--bg-black-100);
     border-radius: 20px;
 }
-
 .aside .nav li a i {
     margin-right: 15px;
 }
@@ -386,9 +334,6 @@ ul{
     transition: all 1s ease;
 
 }
-
-
-
 .home-info{
     flex: 0 0 60%;
     max-width: 60%;
@@ -396,27 +341,11 @@ ul{
     margin-top: 100px;
     font-family: 'Roboto', sans-serif;
     transition: all 1s ease;
-}
-.animation-top{
-    animation: slide-in-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-@keyframes slide-in-top {
-    0% {
-                transform: translateZ(-1400px) translateY(-200px);
-        opacity: 0;
-      }
-      100% {
-                transform: translateZ(0) translateY(0);
-        opacity: 1;
-      }
-  }
-
-  
+}  
 h3.hello{
     font-size: 28px;
     margin: 15px 0 ;
 }
-
 h3.hello span{
     font-family: 'Clicker Script' , cursive;
     font-size: 30px ;
@@ -424,11 +353,9 @@ h3.hello span{
     color: var(--skin-color);
     transition: all 0.4s ease;
 }
-
 h3.hello span:hover{
     transform: scale(1.05);
 }
-
 h3.my-profession{
     font-size: 30px;
     margin: 15px 0 ;
@@ -444,11 +371,9 @@ h3.my-profession{
     opacity: 0.8;
     transition: all 0.4s ease;
 }
-
 .home .home-info p:hover{
     transform: scale(1.05);
 }
-
 .home .home-icons{
     border-bottom: 200px;
     display: flex;
@@ -483,7 +408,6 @@ h3.my-profession{
     transform: scale(1.09);
     transition: all 0.5s ease;
 }
-
 .home .home-img{
     flex: 0 0 40%;
     max-width: 40%;
@@ -493,28 +417,11 @@ h3.my-profession{
     position: relative;
 
 }
-.animation-bottom{
-    animation: slide-in-bottom 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-}
-
-@keyframes slide-in-bottom {
-    0% {
-        transform: translateY(200px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-  }
-
 .home-img::after{
     content: '';
     position: absolute;
     height: 80px ;
     width: 80px;
-
     right: 10px;
     bottom: -40px;
     border-radius: 5px;
@@ -524,32 +431,16 @@ h3.my-profession{
     position: absolute;
     height: 80px ;
     width: 80px;
-
     left: 10px;
     top: -40px;
-
     border-radius: 5px;
-    animation: slide-image-top 0.5s 0.30s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
-
-@keyframes slide-image-top {
-    0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-    }
-    100% {
-      -webkit-transform: translateY(-100px);
-              transform: translateY(-100px);
-    }
-  }
-
 .home .home-img img{
     height: 100%;
     
     border-radius: 5px;
     left: 0;
 }
-
 
 /* ============ABOUT=========== */  
 .about .about-content{
@@ -561,15 +452,10 @@ h3.my-profession{
 .about .about-content .about-row{
     display: flex;
 }
-.about .about-content .about-row img{
-    animation:  slide-top 0.5s 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
 .about .about-content .about-text{
     flex: 0 0 100%;
     max-width: 100%;
 }
-
 .about .about-content .about-text h3{
     font-size: 24px;
     margin-bottom: 15px;
@@ -579,30 +465,25 @@ h3.my-profession{
 .about .about-content .about-text h3 span{
     color: var(--skin-color);
 }
-
 .about .about-content .about-text p{
     font-size: 16px;
     line-height: 25px ;
     color: var(--text-black-700);
 }
-
 .about .about-content .personal-info {
     flex: 0 0 60%;
     max-width: 60%;
-
     margin-top: 40px;
 }
 .about .about-content .personal-info .info-item{
     flex: 0 0 50%;
     max-width: 50%;
-
 }
 .about .about-content .personal-info .info-item p{
     font-weight: 600;
     padding: 10px 0 ;
     font-size: 16px;
     color: var(--text-black-900);
-    
 }
 .about .about-content .personal-info .info-item p span{
     font-weight: 400;
@@ -622,11 +503,9 @@ h3.my-profession{
     max-width: 40%;
     margin-top: 40px;
 }
-
 .about .about-content .skills .skill-item{
     flex: 0 0 100%;
-    max-width: 100%;
-    
+    max-width: 100%;  
 }
 .about .about-content .skills .skill-item h5{
     line-height: 40px;
@@ -642,7 +521,6 @@ h3.my-profession{
     width: 100%;
     position: relative;
 }
-
 .about .about-content .skills .skill-item{
     margin-bottom: 25px;
 }
@@ -662,27 +540,21 @@ h3.my-profession{
     font-weight: 400;
     line-height: 40px ;
 }
-
 .about .about-content .education , .about .about-content .experience {
     flex: 0 0 50%;
     max-width: 50%;
     margin-top: 30px;
 }
-
 .about .about-content h3.title{
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: 700;
     color: var(--text-black-900);
 }
-
 .about .about-content .timeline-box{
     flex: 0 0 100%;
     max-width: 100%;
-   
-
 }
-
 .about .about-content .timeline{
     background-color: var(--bg-black-100);
     padding: 30px 15px ;
@@ -691,7 +563,6 @@ h3.my-profession{
     width: 100%;
     position: relative;
 }
-
 .about .about-content .timeline .timeline-item{
     position: relative;
     padding-left: 37px;
@@ -700,7 +571,6 @@ h3.my-profession{
 .about .about-content .timeline .timeline-item:last-child{
     padding-bottom: 0;
 }
-
 .about .about-content .timeline .timeline-item::before{
     content: '';
     width: 1px;
@@ -710,7 +580,6 @@ h3.my-profession{
     top: 0;
     background-color: var(--skin-color);
 }
-
 .about .about-content .timeline .circle-dot{
     position: absolute;
     left: 0;
@@ -753,7 +622,6 @@ h3.my-profession{
     flex: 0 0 33.33%;
     max-width: 33.33%;
 }
-
 .service .service-item-inner{
     background-color: var(--bg-black-100);
     border: 1px solid var(--bg-black-50);
@@ -765,9 +633,7 @@ h3.my-profession{
 }
 .service .service-item .service-item-inner:hover{
     box-shadow: 0 0 20px rgba(48,46 ,77 ,0.15);
- 
 }
-
 .service .service-item .service-item-inner .icon{
     height: 60px;
     width: 60px;
@@ -777,25 +643,20 @@ h3.my-profession{
     text-align: center;
     transition: all 1s ease;
 }
-
 .service .service-item  .service-item-inner .icon .fa{
     font-size: 40px;
     line-height: 60px;
     color: var(--skin-color);
     transition: all 1s ease;
-   
 }
-
 .service .service-item  .service-item-inner:hover .icon{
     background: var(--skin-color);
     color: var(--bg-black-100);
 }
-
 .service .service-item  .service-item-inner:hover .icon .fa{
     font-size: 25px;
     color: #ffff;
 }
-
 .service .service-item  .service-item-inner h4{
     font-size: 18px;
     margin-bottom: 15px;
@@ -803,7 +664,6 @@ h3.my-profession{
     font-weight: 700;
     text-transform: capitalize;
 }
-
 .service .service-item  .service-item-inner p{
     font-size: 16px;
     color: var(--text-black-700);
@@ -814,26 +674,22 @@ h3.my-profession{
 .portfolio .container{
     padding-bottom: 40px;
 }
-
 .portfolio .row{
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2 ,1fr);
     gap: 2.5rem;
 }
-
 .portfolio .portfolio-heading{
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 40px;
     height: 100px;
 }
-
 .portfolio .portfolio-heading h2{
     color: var(--text-black-900);
     font-weight: 500;
 }
-
 .portfolio .portfolio-item{
     position: relative;
     width: 100%;
@@ -843,7 +699,6 @@ h3.my-profession{
     overflow: hidden;
 }
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-layer{
-   
     position: absolute;
     bottom: 0;
     left: 0;
@@ -862,17 +717,11 @@ h3.my-profession{
     transform: translateY(100%);
     transition: 0.3s all ease;
 }
-
 .portfolio .portfolio-item .portfolio-item-inner:hover .portfolio-layer{
     transform: translateY(0);
 }
-
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-layer h4{
     font-size: 3rem;
-   
-}
-.portfolio .portfolio-item .portfolio-item-inner .portfolio-layer p{
-    
 }
 .portfolio .portfolio-item .portfolio-item-inner{
     /*border: 6px solid var(--bg-black-100);*/
@@ -880,15 +729,12 @@ h3.my-profession{
     overflow: hidden;
     cursor: pointer;
     overflow: hidden;
-
 }
-
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-img img{
     width: 100%;
     height: 100%;
     background: var(--text-black-700);
     transition: 0.3s all ease;
-    
 }
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-img:hover img{
     transform: scale(1.1);
@@ -902,30 +748,25 @@ h3.my-profession{
     font-size: 25px;
     margin-bottom: 20px;
 }
-
 .contact-sub-title{
     color: var(--text-black-900);
     text-align: center;
     font-size: 15px;
     margin-bottom: 60px;
 }
-
 .contact .contact-info-item{
     flex: 0 0 25%;
     max-width: 25%;
     text-align: center;
     margin-bottom: 60px;
 }
-
 .contact .contact-info-item .icon{
     display: inline-block;
 }
-
 .contact .contact-info-item .icon .fa{
     font-size: 25px;
     color: var(--skin-color);
 }
-
 .contact .contact-info-item h4{
     font-size: 18px;
     font-weight: 700;
@@ -933,33 +774,27 @@ h3.my-profession{
     text-transform: capitalize;
     margin: 15px 0 5px;
 }
-
 .contact .contact-info-item p{
     font-size: 16px;
     line-height: 25px ;
     color: var(--text-black-700);
     font-weight: 400;
 }
-
 .contact .contact-form{
     flex: 0 0 100%;
     max-width: 100%;
 }
-
 .contact .contact-form .col-6{
     flex: 0 0 50%;
     max-width: 50%;
 }
-
 .contact .contact-form .col-12{
     flex: 0 0 100%;
     max-width: 100%;
 }
-
 .contact .contact-form .form-item{
     margin-bottom: 30px;
 }
-
 .contact .contact-form .form-item .form-control{
     width: 100%;
     height: 50px;
@@ -971,20 +806,18 @@ h3.my-profession{
     color: var(--text-black-700);
     transition: all 0.3s ease;
 }
-
 .contact .contact-form .form-item .form-control:focus{
     box-shadow: 0 0 20px rgba(48,46 ,77 ,0.15);
 }
-
 .contact .contact-form .form-item textarea.form-control{
     height: 140px ;
 }
-
 .contact .contact-form .btn{
     height: 50px;
     padding: 0 50px;
 }
 
+/* ========== BACKGROND IMAGE ============= */
 
 .featured{
     background-image: url("../img/about.png");
@@ -1008,7 +841,6 @@ h3.my-profession{
     padding-bottom: 150px;
     padding-top: 70px;
 }
-
 .about--featured{
     background-image: url("../img/about2.png");
     background-size: cover;
@@ -1031,6 +863,63 @@ h3.my-profession{
     padding-bottom: 150px;
     padding-top: 70px;
 }
+
+/*      ANIMATIONS  */
+
+.animation-left{
+    animation: slide-in-left 0.9s 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-left {
+    0% {
+              transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+              transform: translateX(0);
+      opacity: 1;
+    }
+}
+.animation-right{
+    animation: slide-in-right 0.9s 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+              transform: translateX(0);
+      opacity: 1;
+    }
+}
+.animation-top{
+    animation: slide-in-top 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes slide-in-top {
+    0% {
+        transform: translateZ(-1400px) translateY(-200px);
+        opacity: 0;
+      }
+      100% {
+                transform: translateZ(0) translateY(0);
+        opacity: 1;
+      }
+}
+.animation-bottom{
+    animation: slide-in-bottom 0.9s 0.9s both;
+}
+@keyframes slide-in-bottom {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
 
 /*  RESPONSIVE   */
 
@@ -1073,6 +962,20 @@ h3.my-profession{
         padding: 4px 0 0 12px;
         margin-top: 45px;
     }
+
+    .aside .nav li{
+        margin-bottom: 30px;
+        color: var(--text-black-900);
+        cursor: pointer;
+        
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+        overflow: none;
+        transition: all ease 0.5s;
+      
+    }
+
     .section{
         left: 0;
     }
@@ -1161,8 +1064,20 @@ h3.my-profession{
         padding: 4px 0 0 12px;
         margin-top: 45px;
     }
+    .aside .nav li{
+        margin-bottom: 30px;
+        color: var(--text-black-900);
+        cursor: pointer;
+        
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+        overflow: visible;
+        transition: all ease 0.5s;
+        width: 100%;
+      
+    }
     .aside .nav li a {
-       
         display: block;
     }
     
@@ -1215,6 +1130,19 @@ h3.my-profession{
     .about .about-content .personal-info{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+
+    .aside .nav li{
+        margin-bottom: 30px;
+        color: var(--text-black-900);
+        cursor: pointer;
+        
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+        overflow: none;
+        transition: all ease 0.5s;
+      
     }
 
 }

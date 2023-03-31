@@ -1,21 +1,4 @@
 
-/*console.log("escroll several on")
-ScrollReveal({ 
-    reset: true ,
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
-
-
-//ScrollReveal().reveal('.tagline', { delay: 500 });
-//ScrollReveal().reveal('.punchline', { delay: 2000 });
-
-ScrollReveal().reveal('.home-info .hello .my-profession .home-icons' , { origin : 'top'});
-ScrollReveal().reveal('.home-img ', { origin : 'bottom'});
-
-console.log("escroll several end")*/
-
 function setActiveStyle(color){
     const alternateStyles = document.querySelectorAll('.alternate-style')
 
@@ -59,7 +42,7 @@ const nav = document.querySelector(".nav"),
         a.addEventListener("click" , function(){
             
             removeBackSection()
-
+            console.log(allSection)
             for(let x = 0 ; x<totalNavList ; x++){
                 if(navList[x].classList.contains('active')){
                     allSection[x].classList.add("back-section")
@@ -101,8 +84,10 @@ document.querySelector(".hire-me").addEventListener("click" , function(){
     const sectionIndex = this.getAttribute("data-section-index")
     showSection(this)
     updateNav(this)
+
     removeBackSection()
     addBackSection(sectionIndex)
+
 })
 
 const navTogglerBtn = document.querySelector(".nav-toggler"),
@@ -135,15 +120,7 @@ function removeBackSection(){
 
 function addBackSection(index){
     allSection[index].classList.add("back-section")
+    
 }
 
 // =================SCROLL REVEAL ==============
-
-
-function removeBackHome(){
-
-}
-
-function addBackHome(){
-
-}
