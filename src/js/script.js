@@ -23,7 +23,8 @@ strings:[
     '<i class="fab fa-java"></i>   Java' , 
     '<i class="fa fa-laptop-code"></i> Front-end Developer' , 
     '<i class="fab fa-react"></i>  React.js' ,
-    "Javascript"],
+    '<i class="fab fa-js"></i> Javascript'
+],
     typeSpeed: 150, 
     BackSpeed:200,
     loop: true
