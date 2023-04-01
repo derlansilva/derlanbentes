@@ -61,36 +61,8 @@ ul{
 }
 .section.back-section{
     z-index: 1;
-    animation: slideLeft 0.1s 0.1s ease;
-}
-@keyframes slideleft{
-    0%{
-        transform: translateX(0%);
-    }
-    100%{
-        transform: translateX(100%);
-    }
-}
-.section.active{
-    z-index: 2;
-    opacity: 1;
-    /*animation: slideintop 0.5s 0.5s both;*/
-}
-
-@keyframes slideintop {
-    0% {
-                transform: translateZ(-1400px) translateY(-200px);
-        opacity: 0;
-      }
-      100% {
-                transform: translateZ(0) translateY(0);
-        opacity: 1;
-      }
-}
-.section.remove-back{
     animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
-
 @keyframes slide-out-bottom {
     0% {
       -webkit-transform: translateY(0);
@@ -103,6 +75,25 @@ ul{
       opacity: 0;
     }
   }
+  
+
+.section.active{
+    z-index: 2;
+    opacity: 1;
+    animation: slideintop 0.5s both;
+}
+
+@keyframes slideintop {
+    0% {
+                transform: translateZ(-1400px) translateY(-200px);
+        opacity: 0;
+      }
+      100% {
+                transform: translateZ(0) translateY(0);
+        opacity: 1;
+      }
+}
+
 .hidden{
     display: none !important;
 }
@@ -694,7 +685,6 @@ h3.my-profession{
     position: relative;
     width: 100%;
     border-radius: 5px;
-    margin-bottom: 30px;
     height: 100%;
     overflow: hidden;
 }
@@ -715,7 +705,7 @@ h3.my-profession{
     overflow: hidden;
     color: var(--text-black-700);
     transform: translateY(100%);
-    transition: 0.3s all ease;
+    transition: 0.9s all ease;
 }
 .portfolio .portfolio-item .portfolio-item-inner:hover .portfolio-layer{
     transform: translateY(0);

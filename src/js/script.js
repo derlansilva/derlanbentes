@@ -35,17 +35,14 @@ const nav = document.querySelector(".nav"),
     totalNavList = navList.length,
     allSection = document.querySelectorAll(".section"),
     totalSection = allSection.length
-
+    console.log(allSection)
     for(let i = 0 ;i<totalNavList;i++){
         const a = navList[i]
- 
         a.addEventListener("click" , function(){
             
             removeBackSection()
-            console.log(allSection)
             for(let x = 0 ; x<totalNavList ; x++){
                 if(navList[x].classList.contains('active')){
-                    allSection[x].classList.add("back-section")
                     addBackSection(x)
                 }
                 navList[x].classList.remove('active')
@@ -58,8 +55,10 @@ const nav = document.querySelector(".nav"),
         })
     }
 
+//function responsible change screen
 function showSection(element){
     for(let i=0; i <totalSection ; i++){
+        
         allSection[i].classList.remove("active")
     }
     const target = element.getAttribute('href').split('#')[1]
@@ -74,6 +73,7 @@ function updateNav(element){
         const target = element.getAttribute('href').split('#')[1]
         if(target === navList[i].getAttribute("href").split("#")[1]){
             navList[i].classList.add("active")
+            
         }
     }
 
@@ -99,20 +99,22 @@ const navTogglerBtn = document.querySelector(".nav-toggler"),
     })
 
 
-    function asideSectionTogglerBtn(){
-        aside.classList.toggle("open")
-        navTogglerBtn.classList.toggle('open')
-        for(let i= 0 ; i<totalSection; i++){
-            allSection[i].classList.toggle("open")
-        }
+function asideSectionTogglerBtn(){
+    aside.classList.toggle("open")
+    navTogglerBtn.classList.toggle('open')
+    for(let i= 0 ; i<totalSection; i++){
+        allSection[i].classList.toggle("open")
     }
+}
 
 
 //====REMOVER O FUNDO QUANDO TROCAR TELA 
 
 function removeBackSection(){
+
     for(let i=0; i <totalSection ; i++){
         allSection[i].classList.remove("back-section")
+        
     }
 }
 
@@ -120,7 +122,6 @@ function removeBackSection(){
 
 function addBackSection(index){
     allSection[index].classList.add("back-section")
-    
 }
 
 // =================SCROLL REVEAL ==============
