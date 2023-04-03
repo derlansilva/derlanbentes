@@ -8,7 +8,9 @@
     --text-black-900: #ffffff;
     --text-black-700: #e9e9e9;
 
-  
+    --back-back-900 : #393939;
+    --back-back-700 : #797676;
+    --back-back-100 : #171616;
 }
 body.dark{
     
@@ -42,6 +44,21 @@ body {
 ul{
     list-style: none;
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#canvas {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-black-900);
+}
+
 .section{
     background: var(--bg-black-900);
     min-height: 100vh;
@@ -49,7 +66,8 @@ ul{
     padding: 0 30px;
     opacity: 1;
     position: fixed;
-    left: 150px;
+    left: 0;
+    margin:auto;
     top: 0;
     right: 0;
     bottom: 0;
@@ -61,7 +79,7 @@ ul{
 }
 .section.back-section{
     z-index: 1;
-    animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    /*animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;*/
 }
 @keyframes slide-out-bottom {
     0% {
@@ -80,7 +98,7 @@ ul{
 .section.active{
     z-index: 2;
     opacity: 1;
-    animation: slideintop 0.5s both;
+    /*animation: slideintop 0.5s both;*/
 }
 
 @keyframes slideintop {
@@ -93,6 +111,7 @@ ul{
         opacity: 1;
       }
 }
+
 
 .hidden{
     display: none !important;
@@ -608,12 +627,22 @@ h3.my-profession{
 .service .container{
     padding-bottom: 40px;
 }
+.service .container .row .service-content{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(2 , 1fr);
+
+}
 .service .service-item{
-    margin-bottom: 30px;
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
+    margin-bottom: 60px;
+    flex: 0 0 50%;
+    max-width: 90%;
+   
 }
 .service .service-item-inner{
+    
     background-color: var(--bg-black-100);
     border: 1px solid var(--bg-black-50);
     border-radius: 10px;
@@ -621,9 +650,11 @@ h3.my-profession{
     text-align: center;
     transition: all 0.3s ease;
     min-height: 300px;
+    width: 100%;
 }
 .service .service-item .service-item-inner:hover{
     box-shadow: 0 0 20px rgba(48,46 ,77 ,0.15);
+   
 }
 .service .service-item .service-item-inner .icon{
     height: 60px;
@@ -655,7 +686,7 @@ h3.my-profession{
     font-weight: 700;
     text-transform: capitalize;
 }
-.service .service-item  .service-item-inner p{
+.service .service-item  .service-item-inner p{  
     font-size: 16px;
     color: var(--text-black-700);
     line-height: 25px;
@@ -664,18 +695,24 @@ h3.my-profession{
 /*   Portfolio   */
 .portfolio .container{
     padding-bottom: 40px;
+    height: 100vh;
 }
-.portfolio .row{
+.portfolio .row .portfolio-content{
+    width: 100%;
     display: grid;
     align-items: center;
+    justify-content: center;
+    margin: auto;
     grid-template-columns: repeat(2 ,1fr);
-    gap: 2.5rem;
+    
 }
+
+
 .portfolio .portfolio-heading{
     flex: 0 0 100%;
-    max-width: 100%;
+    max-width: 50%;
     margin-bottom: 40px;
-    height: 100px;
+    height: 100%;
 }
 .portfolio .portfolio-heading h2{
     color: var(--text-black-900);
@@ -683,17 +720,26 @@ h3.my-profession{
 }
 .portfolio .portfolio-item{
     position: relative;
-    width: 100%;
+    width: 90%;
     border-radius: 5px;
-    height: 100%;
+   
     overflow: hidden;
+    margin: auto;
+    margin-bottom: 40px;
+   
+}
+.portfolio .portfolio-item .portfolio-item-inner{
+
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
 }
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-layer{
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    top: 0;
     background: linear-gradient(rgba(0 ,0 ,0 ,.1), var(--skin-color));
     display: flex;
     justify-content: center;
@@ -702,7 +748,7 @@ h3.my-profession{
     border-radius: 5px;
     padding: 0 4rem;
     text-align: center;
-    overflow: hidden;
+    /*overflow: hidden;*/
     color: var(--text-black-700);
     transform: translateY(100%);
     transition: 0.9s all ease;
@@ -713,13 +759,7 @@ h3.my-profession{
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-layer h4{
     font-size: 3rem;
 }
-.portfolio .portfolio-item .portfolio-item-inner{
-    /*border: 6px solid var(--bg-black-100);*/
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-    overflow: hidden;
-}
+
 .portfolio .portfolio-item .portfolio-item-inner .portfolio-img img{
     width: 100%;
     height: 100%;
@@ -861,7 +901,7 @@ h3.my-profession{
 }
 @keyframes slide-in-left {
     0% {
-              transform: translateX(-200px);
+              transform: translateX(-50px);
       opacity: 0;
     }
     100% {

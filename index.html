@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <!--   STYLE SWITCHER   -->
-    <link rel="stylesheet" href="src/css/colors/color-1.css" class="alternate-style" title="color-1" >
-    <link rel="stylesheet" href="src/css/colors/color-2.css" class="alternate-style" title="color-2"  disabled>
-    <link rel="stylesheet" href="src/css/colors/color-3.css" class="alternate-style" title="color-3" disabled >
+    <link rel="stylesheet" href="src/css/colors/color-1.css" class="alternate-style" title="color-1">
+    <link rel="stylesheet" href="src/css/colors/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="src/css/colors/color-3.css" class="alternate-style" title="color-3" disabled>
     <link rel="stylesheet" href="src/css/colors/color-4.css" class="alternate-style" title="color-4" disabled>
     <link rel="stylesheet" href="src/css/colors/color-5.css" class="alternate-style" title="color-5" disabled>
     <link rel="stylesheet" href="./src/css/style-switcher.css">
@@ -22,22 +22,24 @@
 <body>
     <!--MAIN CONTAINER START-->
     <div class="main-container">
+
         <!--ASIDE START-->
         <div class="aside">
-            
+
             <div class="nav-toggler">
                 <span></span>
             </div>
             <ul class="nav animation-right">
                 <li class="active" href="#home"><i class="fa fa-home"></i><span>Home</span></li>
 
-                <li href="#about" ><i class="fa fa-user"></i><span>About</span></li>
+                <li href="#about"><i class="fa fa-user"></i><span>About</span></li>
 
-                <li href="#services"><i class="fas fa-desktop"></i><span>Services</span></li>
+                <li href="#service"><i class="fas fa-desktop"></i><span>Services</span></li>
 
-                <li href="#portfolio"><i class="fas fa-laptop-code"></i><span >Projects</span></li>
+                <li href="#portfolio"><i class="fas fa-laptop-code"></i><span>Projects</span></li>
 
-                <li href="#contact"><i class="fa fa-comments"></i><span>Contacts</sapn></li>
+                <li href="#contact"><i class="fa fa-comments"></i><span>Contacts</sapn>
+                </li>
 
             </ul>
         </div>
@@ -45,25 +47,30 @@
 
         <!--MAIN CONTENT START-->
         <div class="main-content">
+
             <!--HOME SECTION START-->
-            <section class="home active section" id="home">
-                
-                <div class="container">
+            <section class="home active section section-home" id="home">
+                <canvas id='canvas'></canvas>
+                <div class="container row-home">
                     <div class="row">
                         <div class="home-info animation-top padd-15">
                             <h3 class="hello">Hello , I´m <span class="name">Derlan Silva</span></h3>
                             <h3 class="my-profession"><span class="typing">Full-stack Developer</span></h3>
                             <p>I´m a backend developer with extensive experience for over 4 years ,
-                                during my career I already learned a little about Python, 
+                                during my career I already learned a little about Python,
                                 Javascript, but it was in Java where I managed to find myself
                             </p>
                             <div class="home-icons animation-right">
-                                <a href="" ><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://www.facebook.com/joderlan.silva.3/" target="_blank"><i class="fab fa-facebook"></i></a>
-                                <a href="https://github.com/derlansilva" target="_blank"><i class="fab fa-github"></i></a>
-                                <a href="https://www.instagram.com/derlansilvadev/" target="_blank"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/derlan-silva-603a81197/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                                
+                                <a href=""><i class="fab fa-whatsapp"></i></a>
+                                <a href="https://www.facebook.com/joderlan.silva.3/" target="_blank"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="https://github.com/derlansilva" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                                <a href="https://www.instagram.com/derlansilvadev/" target="_blank"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/derlan-silva-603a81197/" target="_blank"><i
+                                        class="fab fa-linkedin"></i></a>
+
 
                             </div>
                             <a href="#" class="btn animation-bottom">Download CV </a>
@@ -74,25 +81,20 @@
                                     <div class="featured--horizontal">
                                     </div>
                                 </div>
-                               
-                    
+
+
                             </section>
-                           
+
                         </div>
                     </div>
                 </div>
             </section>
             <!--HOME SECTION END -->
             <!--=======ABOUT SELECTION START======-->
-            <section class="about section" id="about">
+            <section class="about section section-home" id="about">
                 <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            
-                        </div>
-                    </div>
 
-                    <div class="row">
+                    <div class="row row-about">
                         <div class="about-content padd-15">
                             <div class="about-row">
                                 <div class="about-img">
@@ -103,14 +105,14 @@
                                         </div>
                                     </section>
                                 </div>
-                                <div class="about-text padd-15">
+                                <div class="about-text padd-15 second-about">
                                     <h3>I´m Derlan silva and <span>Full-stack Developer</span></h3>
                                     <p>I was born in a small town in the interior of the Amazonas ,</p>
                                     <p>and since was a child,tecnology was my been my passion</p>
                                     <p>i´m currently looking for my first oppotunity as a developer</p>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row third-about">
                                 <div class="personal-info padd-15">
                                     <div class="row">
                                         <div class="info-item padd-15">
@@ -134,7 +136,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15 ">
-                                        
+
                                             <a href="#contact" data-section-index="1" class="btn hire-me">Hire me </a>
                                         </div>
                                     </div>
@@ -142,7 +144,7 @@
                                 <div class="skills padd-15">
                                     <div class="row">
                                         <div class="skill-item padd-15">
-                                            <h5> <i class="fab fa-css3"></i>  CSS</h5>
+                                            <h5> <i class="fab fa-css3"></i> CSS</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width: 50%;"></div>
                                                 <div class="skill-percent">50%</div>
@@ -150,7 +152,7 @@
                                         </div>
 
                                         <div class="skill-item padd-15">
-                                            <h5><i class="fab fa-js"></i>   JAVASCRIPT</h5>
+                                            <h5><i class="fab fa-js"></i> JAVASCRIPT</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width: 80%;"></div>
                                                 <div class="skill-percent">80</div>
@@ -158,7 +160,7 @@
                                         </div>
 
                                         <div class="skill-item padd-15">
-                                            <h5> <i class="fab fa-html5"></i>	HTML</h5>
+                                            <h5> <i class="fab fa-html5"></i> HTML</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width: 85%;"></div>
                                                 <div class="skill-percent">85%</div>
@@ -166,7 +168,7 @@
                                         </div>
 
                                         <div class="skill-item padd-15">
-                                            <h5><i class="fab fa-python"></i>  PYTHON</h5>
+                                            <h5><i class="fab fa-python"></i> PYTHON</h5>
                                             <div class="progress">
                                                 <div class="progress-in" style="width: 45%;"></div>
                                                 <div class="skill-percent">45%</div>
@@ -176,11 +178,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row  fourth-about">
                                 <div class="education padd-15">
                                     <h3 class="title">Education</h3>
                                     <div class="row">
-                                        <div class="timeline-box padd-15">
+                                        <div class="timeline-box padd-15 fourth-about">
                                             <div class="timeline shadow-dark">
                                                 <!-- ===== timeline item ===== -->
                                                 <div class="timeline-item">
@@ -286,225 +288,231 @@
             <!--=======ABOUT SELECTION END======-->
 
             <!--=======SERVICES SELECTION START======-->
-            <section class="service section" id="services">
+            <section class="service section section-service" id="service">
                 <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- =====SERVICES ITEM START===== -->
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-mobile-alt"></i>
+                    <div class="row row-service">
+                        <div class="service-content padd-15">
+                            <!-- =====SERVICES ITEM START===== -->
+                            <div class="service-item">
+                                <div class="service-item-inner">
+                                    <div class="icon">
+                                        <i class="fa fa-mobile-alt"></i>
+                                    </div>
+                                    <h4>Mobile Developer</h4>
+                                    <p>Mobile Developement with React-Native</p>
                                 </div>
-                                <h4>Mobile Developer</h4>
-                                <p>Mobile Developement with React-Native</p>
+                            </div>
+                            <!-- =====SERVICES ITEM END===== -->
+
+                            <div class="service-item">
+                                <div class="service-item-inner">
+                                    <div class="icon">
+                                        <i class="fa fa-laptop-code"></i>
+                                    </div>
+                                    <h4>Font-end Developer</h4>
+                                    <p>Fron-end Developement with React.js</p>
+                                </div>
+                            </div>
+                            <!-- =====SERVICES ITEM END===== -->
+
+
+                            <!-- =====SERVICES ITEM END===== -->
+
+                            <div class="service-item">
+                                <div class="service-item-inner">
+                                    <div class="icon">
+                                        <i class="fa fa-code"></i>
+                                    </div>
+                                    <h4>Back-end Developer</h4>
+                                    <p>Back-end Developement with Node.js with Javascript and Typescript</p>
+                                </div>
+                            </div>
+
+                            <div class="service-item">
+                                <div class="service-item-inner">
+                                    <div class="icon">
+                                        <i class="fa fa-code"></i>
+                                    </div>
+                                    <h4>Back-end Developer</h4>
+                                    <p>Back-end Developement with JAVA </p>
+                                </div>
                             </div>
                         </div>
-                        <!-- =====SERVICES ITEM END===== -->
 
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-laptop-code"></i>
-                                </div>
-                                <h4>Font-end Developer</h4>
-                                <p>Fron-end Developement with React.js</p>
-                            </div>
-                        </div>
-                        <!-- =====SERVICES ITEM END===== -->
-
-                       
-                        <!-- =====SERVICES ITEM END===== -->
-
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-code"></i>
-                                </div>
-                                <h4>Back-end Developer</h4>
-                                <p>Back-end Developement with Node.js with Javascript and Typescript</p>
-                            </div>
-                        </div>
-
-                        <div class="service-item padd-15">
-                            <div class="service-item-inner">
-                                <div class="icon">
-                                    <i class="fa fa-code"></i>
-                                </div>
-                                <h4>Back-end Developer</h4>
-                                <p>Back-end Developement with JAVA </p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
             <!--=======SERVICES SELECTION END======-->
 
             <!-- ====== PORTIFOLIO SECTION START ======= -->
-            <section class="portfolio section" id="portfolio">
+            <section class="portfolio section section-portfolio" id="portfolio">
                 <div class="container">
-                    
-                    <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>My last Projects: </h2>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <!-- ============ PORTFOLIO ITEM START ===========-->
-                        <div class="portfolio-item ">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG" alt="" srcset="">
-                                </div>
-                                <div class="portfolio-layer">
-                                    <h4>Netflix clone</h4>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, 
-                                        facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam quos, 
-                                        in ducimus atque doloremque accusamus odit, amet reiciendis sed!
-                                    </p>
-                                    <a href=" "> <i class="fas fa-laptop-code"></i> </a>
+                    <div class="row  row-portfolio">
+                        <div class="portfolio-content">
+                            <!-- ============ PORTFOLIO ITEM START ===========-->
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-inner shadow-dark">
+                                    <div class="portfolio-img">
+                                        <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG"
+                                            alt="" srcset="">
+                                    </div>
+                                    <div class="portfolio-layer">
+                                        <h4>Netflix clone</h4>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
+                                            facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam
+                                            quos,
+                                            in ducimus atque doloremque accusamus odit, amet reiciendis sed!
+                                        </p>
+                                        <a href=" "> <i class="fas fa-laptop-code"></i> </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="portfolio-item ">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG" alt="" srcset="">
-                                </div>
-                                <div class="portfolio-layer">
-                                    <h4>Netflix clone</h4>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, 
-                                        facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam quos, 
-                                        in ducimus atque doloremque accusamus odit, amet reiciendis sed!
-                                    </p>
-                                    <a href=" "> <i class="fas fa-laptop-code"></i> </a>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-inner shadow-dark">
+                                    <div class="portfolio-img">
+                                        <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG"
+                                            alt="" srcset="">
+                                    </div>
+                                    <div class="portfolio-layer">
+                                        <h4>Netflix clone</h4>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
+                                            facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam
+                                            quos,
+                                            in ducimus atque doloremque accusamus odit, amet reiciendis sed!
+                                        </p>
+                                        <a href=" "> <i class="fas fa-laptop-code"></i> </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="portfolio-item ">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG" alt="" srcset="">
-                                </div>
-                                <div class="portfolio-layer">
-                                    <h4>Netflix clone</h4>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, 
-                                        facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam quos, 
-                                        in ducimus atque doloremque accusamus odit, amet reiciendis sed!
-                                    </p>
-                                    <a href=" "> <i class="fas fa-laptop-code"></i> </a>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-inner shadow-dark">
+                                    <div class="portfolio-img">
+                                        <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG"
+                                            alt="" srcset="">
+                                    </div>
+                                    <div class="portfolio-layer">
+                                        <h4>Netflix clone</h4>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
+                                            facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam
+                                            quos,
+                                            in ducimus atque doloremque accusamus odit, amet reiciendis sed!
+                                        </p>
+                                        <a href=" "> <i class="fas fa-laptop-code"></i> </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="portfolio-item ">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG" alt="" srcset="">
-                                </div>
-                                <div class="portfolio-layer">
-                                    <h4>Netflix clone</h4>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, 
-                                        facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam quos, 
-                                        in ducimus atque doloremque accusamus odit, amet reiciendis sed!
-                                    </p>
-                                    <a href=" "> <i class="fas fa-laptop-code"></i> </a>
+                            <div class="portfolio-item">
+                                <div class="portfolio-item-inner shadow-dark">
+                                    <div class="portfolio-img">
+                                        <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG"
+                                            alt="" srcset="">
+                                    </div>
+                                    <div class="portfolio-layer">
+                                        <h4>Netflix clone</h4>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
+                                            facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam
+                                            quos,
+                                            in ducimus atque doloremque accusamus odit, amet reiciendis sed!
+                                        </p>
+                                        <a href=" "> <i class="fas fa-laptop-code"></i> </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- ============ PORTFOLIO ITEM END ===========-->
+                            <!-- ============ PORTFOLIO ITEM END ===========-->
+                        </div>
                     </div>
                 </div>
             </section>
             <!-- ====== PORTIFOLIO SECTION END ======= -->
             <!-- ====== CONTACT SECTION START ======= -->
-            <section class="contact section" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
-                        </div>
-                    </div>
+            <section class="contact section section-contact" id="contact">
+                <div class="container row-contact">
+                    <div>
 
-                    <h3 class="contact-title padd-15">Have You Any Question ?</h3>
-                    <h4 class="contact-sub-title padd-15">I´M AT YOUR SERVICES </h4>
-                    <div class="row">
-                        <!-- ====== CONTACT INFO ITEM START ======-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-phone"></i></div>
-                            <h4>Call Us On </h4>
-                            <p>+55 92 99133-2369</p>
+                        <div class="row contact-content first-contact">
+                            <div class="section-title padd-15">
+                                <h2>Contact Me</h2>
+                            </div>
                         </div>
 
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                            <h4>Office </h4>
-                            <p>Curitiba Pr Brazil</p>
+                        <h3 class="contact-title padd-15 second-contact">Have You Any Question ?</h3>
+                        <h4 class="contact-sub-title padd-15 third-contact">I´M AT YOUR SERVICES </h4>
+                        <div class="row contact-content fourth-contact">
+                            <!-- ====== CONTACT INFO ITEM START ======-->
+                            <div class="contact-info-item padd-15 first ">
+                                <div class="icon"><i class="fa fa-phone"></i></div>
+                                <h4>Call Us On </h4>
+                                <p>+55 92 99133-2369</p>
+                            </div>
+
+                            <div class="contact-info-item padd-15 second">
+                                <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+                                <h4>Office </h4>
+                                <p>Curitiba Pr Brazil</p>
+                            </div>
+
+                            <div class="contact-info-item padd-15">
+                                <div class="icon"><i class="fa fa-envelope"></i></div>
+                                <h4>E-mail </h4>
+                                <p>joderlan.silva@gmail.com</p>
+                            </div>
+
+                            <div class="contact-info-item padd-15">
+                                <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                                <h4>Website </h4>
+                                <p>.....</p>
+                            </div>
+
+                            <!-- ====== CONTACT INFO ITEM END ======-->
                         </div>
 
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-envelope"></i></div>
-                            <h4>E-mail </h4>
-                            <p>joderlan.silva@gmail.com</p>
-                        </div>
+                        <h3 class="contact-title padd-15 right-contact">SEND ME AN E-MAIL</h3>
+                        <h4 class="contact-sub-title padd-15">I´M VERY RESPONSIVE TO MESSENGES </h4>
 
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                            <h4>Website </h4>
-                            <p>.....</p>
-                        </div>
+                        <!-- CONTACT FORM -->
+                        <div class="row contact-content fiveth-contact">
+                            <div class="contact-form padd-15">
+                                <div class="row">
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Name">
+                                        </div>
+                                    </div>
 
-                        <!-- ====== CONTACT INFO ITEM END ======-->
-                    </div>
-
-                    <h3 class="contact-title padd-15">SEND ME AN E-MAIL</h3>
-                    <h4 class="contact-sub-title padd-15">I´M VERY RESPONSIVE TO MESSENGES </h4>
-
-                    <!-- CONTACT FORM -->
-                    <div class="row">
-                        <div class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
+                                    <div class="form-item col-6 padd-15">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="E-Mail">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Subject">
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="E-Mail">
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <div class="form-group">
+                                            <textarea name="" class="form-control" id=""
+                                                placeholder="Message"></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject">
+
+                                <div class="row">
+                                    <div class="form-item col-12 padd-15">
+                                        <button type="submit" class="btn">Send Message</button>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
-                                    </div>
-                                </div>
                             </div>
-
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <button type="submit" class="btn">Send Message</button>                                  
-                                </div>
-                            </div>
-
                         </div>
                     </div>
             </section>
@@ -517,9 +525,9 @@
         <div class="style-switcher">
             <div class="style-switcher-toggler s-icon  animation-left">
                 <i class="fas fa-cog fa-spin"></i>
-            </div>  
+            </div>
 
-            <div class="day-night s-icon animation-left"> 
+            <div class="day-night s-icon animation-left">
                 <i class="fas"></i>
             </div>
 
@@ -535,7 +543,8 @@
         </div>
         <!-- STYLE SWITCHER END -->
         <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+            referrerpolicy="no-referrer"></script>
         <script src="src/js/index.js"></script>
         <script src="src/js/pageController.js"></script>
         <script src="./src/js/script.js"></script>
