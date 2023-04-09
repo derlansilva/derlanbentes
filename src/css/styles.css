@@ -132,6 +132,7 @@ ul{
     padding-top: 60px;
     padding-bottom: 70px;
     width: 100%;
+    
 }
 .section-title{
     flex:  0 0 100%;
@@ -635,15 +636,13 @@ h3.my-profession{
 }
 .service .container .row .service-content{
     width: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: repeat(2 , 1fr);
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .service .service-item{
     margin-bottom: 60px;
-    flex: 0 0 50%;
+    flex: 0 0 45%;
     max-width: 90%;
    
 }
