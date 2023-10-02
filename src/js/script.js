@@ -324,12 +324,13 @@ class Particle{
         this.x = mouse.x;
         this.y = mouse.y;
 
+        //here size of colors
         this.size = Math.random() * 2 + 0.1;
         this.speedX = Math.random() * 2 - 1 ;
         this.speedY = Math.random() *2 - 1 ;
-        this.colors = ['#ec1839' , '#fa5b0f' , '#37b182' ,'#1854b4' , '#f021b2']
-        this.color  =  this.colors[Math.floor(Math.random() * this.colors.length)];
-        console.log('color' , this.color)
+        this.color  = 'hsl(' + hue + ',100% , 50% )';
+
+        console.log("color" , this.color)
     }
 
     update(){
