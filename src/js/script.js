@@ -1,4 +1,3 @@
-
 function setActiveStyle(color){
     const alternateStyles = document.querySelectorAll('.alternate-style')
 
@@ -20,7 +19,7 @@ strings:[
     '<i class="fab fa-node-js"></i>  Node.js' ,
     '<i class="fab fa-python"></i>  Python',
     "Django" , 
-    '<i class="fab fa-java"></i>   Java' , 
+    '<i class="fab fa-java"></i>  Java' , 
     '<i class="fa fa-laptop-code"></i> Front-end Developer' , 
     '<i class="fab fa-react"></i>  React.js' ,
     '<i class="fab fa-js"></i> Javascript'
@@ -35,7 +34,7 @@ const nav = document.querySelector(".nav"),
     totalNavList = navList.length,
     allSection = document.querySelectorAll(".section"),
     totalSection = allSection.length
-   
+    
     for(let i = 0 ;i<totalNavList;i++){
         const a = navList[i]
         a.addEventListener("click" , function(){
@@ -65,11 +64,11 @@ function showSection(element){
     const target = element.getAttribute('href').split('#')[1]
     animationBack(target)
     document.querySelector('#'+target).classList.add('active')
-   
+    
 }
 
 function updateNav(element){
-  
+    
     for(let i = 0 ; i<totalNavList; i++){
         navList[i].classList.remove("active")
         const target = element.getAttribute('href').split('#')[1]
@@ -79,7 +78,7 @@ function updateNav(element){
         }
     }
 
-   
+    
 }
 
 function animationBack(element){
@@ -93,7 +92,7 @@ function animationBack(element){
     for(let i = 0 ; i< count ; i++){
         firstElement.children[i].classList.add(animation[i])
     }
-  
+    
     
 
 }
@@ -160,68 +159,67 @@ function addBackSection(index){
     
 }
 
+
 // =================SCROLL REVEAL ==============
 
 
-
-// animation canvas 
-/*
+// animation canvas (EFEITO COM MAIOR VISIBILIDADE E INTERATIVIDADE DO MOUSE)
 const canvas = document.querySelector("#canvas")
 const ctx = canvas.getContext('2d')
-ctx.canvas.width = window.innerWidth;
-ctx.canvas.height = window.innerHeight;
+
+// Variável para a mudança de cor
+let hue = 0; 
+
+function setCanvasSize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+setCanvasSize(); // Define o tamanho inicial
 
 let particleArray = [];
+// Cores originais mantidas
 const colours = [
-    
-    '#151515',
+    '#151515', 
     '#222222',
     '#393939',
     '#e9e9e9',
     '#bdbdc9',
-  
+    '#ff0077', 
+];
 
-    
-]
+// AJUSTE: Tamanho e contagem
+const maxSize =  3; 
+const minSize = 0.5; 
+const particleCount = 150; 
 
-const maxSize =  40;
-const minSize = 0;
-//const mouseRadius = 60;
 
 let mouse = {
-    x: null,
-    y: null
+    x: undefined, 
+    y: undefined
 }
 
-//funcion initial mouse
-
+// NOVO: Listeners de mouse para interatividade
 window.addEventListener('mousemove' , function(event){
-    //pega a posição do mouse 
     mouse.x = event.x;
     mouse.y = event.y;
+});
 
-    //console.log(mouse.y)
-})
+window.addEventListener("mouseout" , function(){
+    mouse.x = undefined;
+    mouse.y = undefined;
+});
+
 
 //create constructor function for particle 
-
 function Particle(x,y , directionX , directionY , size , colour ){
     this.x = x;
     this.y = y;
-    this.directionX = directionX;
-    this.directionY = directionY;
+    this.directionX = directionX * 0.5; 
+    this.directionY = directionY * 0.5; 
     this.size = size;
-    this.colour = colour
+    this.colour = colours[Math.floor(Math.random() * colours.length)]; 
 }
 
-//add draw methods to particle prototype
-
-Particle.prototype.draw = function(){
-    ctx.beginPath();
-    ctx.arc(this.x , this.y , this.size ,0, Math.PI * 2 , false)
-    ctx.fillStyle = this.colour;
-    ctx.fill()
-}
 
 //add update method to particle prototype 
 Particle.prototype.update = function(){
@@ -235,165 +233,116 @@ Particle.prototype.update = function(){
     this.x += this.directionX;
     this.y += this.directionY;
 
-    //mouse interactyve 
-    let mouseRadius = 50;
-    if(mouse.x - this.x  < mouseRadius && mouse.x -this.x  >- mouseRadius && mouse.y - this.y < mouseRadius && mouse.y -this.y >- mouseRadius){
-        if(this.size < maxSize){
-            this.size += 3 ;
-            this.x -= 1.5;
-        }
-    }else if(this.size > minSize){
-        this.size -=.1;
-    }
-    if(this.size < 0){
-        this.size = 0 ;
-    }
+    // BLOCO DE INTERATIVIDADE: Mouse
+    let mouseRadius = 50; // O raio de influência do mouse
+    let maxSizeInteraction = 5; // O tamanho máximo que a partícula pode atingir
 
-    this.draw();
+    // Verifica se o mouse está perto
+    if(mouse.x - this.x  < mouseRadius && mouse.x -this.x  >- mouseRadius && 
+       mouse.y - this.y < mouseRadius && mouse.y -this.y >- mouseRadius) {
+        
+        // Se perto e o tamanho for menor que o máximo de interação
+        if(this.size < maxSizeInteraction){
+            this.size += 1.5; // Faz a partícula crescer 
+            this.x -= 0.5; // Empurra a partícula um pouco para o lado
+        }
+    } else if(this.size > minSize){
+        // Se longe, faz a partícula encolher de volta ao tamanho normal
+        this.size -= 0.1;
+    }
+    if(this.size < minSize){
+        this.size = minSize;
+    }
 }
 
-//create particle array 
+// Função para conectar as partículas e mudar as cores
+function connect() {
+    let opacityValue = 1;
 
+    for (let a = 0; a < particleArray.length; a++) {
+        for (let b = a; b < particleArray.length; b++) {
+            
+            let distance = ((particleArray[a].x - particleArray[b].x) * (particleArray[a].x - particleArray[b].x)) + 
+                           ((particleArray[a].y - particleArray[b].y) * (particleArray[a].y - particleArray[b].y));
+            
+            // Desenha a linha se a distância for aceitável
+            if (distance < 10000) { 
+                opacityValue = 1 - (distance / 10000); 
+                
+                // Opacidade das linhas
+                const finalOpacity = opacityValue * 0.15; 
+                
+                // Largura da linha
+                ctx.lineWidth = 1.0; 
+                
+                // Aplica a cor dinâmica (mudando) às linhas de conexão
+                ctx.strokeStyle = 'hsla(' + hue + ', 100%, 50%,' + finalOpacity + ')';
+                
+                ctx.beginPath();
+                ctx.moveTo(particleArray[a].x, particleArray[a].y);
+                ctx.lineTo(particleArray[b].x, particleArray[b].y);
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+
+//create particle array 
 function init(){
     particleArray = []
 
-    for(let i=0 ; i< 1000 ; i++){
-        let size = 10;
-        let x = (Math.random() * ((innerWidth - size * 2 ) - (size * 2 )) + size * 2);
-        let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+    for(let i=0 ; i< particleCount ; i++){
+        let size = Math.random() * (maxSize - minSize) + minSize;
+        let x = (Math.random() * ((window.innerWidth - size * 2 ) - (size * 2 )) + size * 2);
+        let y = (Math.random() * ((window.innerHeight - size * 2) - (size * 2)) + size * 2);
 
-        let directionX = (Math.random() * .2) - .1 ;
-        let directionY = (Math.random() * .2) - .1;
-        let colour  = colours[Math.floor(Math.random()   * colours.length)];
-
-        particleArray.push(new Particle(x ,y ,directionX , directionY , size , colour));
+        let directionX = (Math.random() * .4) - .2 ; 
+        let directionY = (Math.random() * .4) - .2;
+        
+        particleArray.push(new Particle(x ,y ,directionX , directionY , size));
     }
 }
 
 //animation loop 
 function animate(){
     requestAnimationFrame(animate);
-    ctx.clearRect( 0 , 0 , innerWidth , innerHeight);
+    
+    // LIMPEZA TOTAL DA TELA (Sem rastro)
+    ctx.clearRect( 0 , 0 , canvas.width , canvas.height); 
+    
+    // Atualiza o movimento das partículas E DESENHA
     for(let i =0 ; i < particleArray.length; i++ ){
         particleArray[i].update();
+        
+        // DESENHANDO PARTÍCULAS AQUI COM OPACIDADE DE 30%
+        ctx.beginPath();
+        ctx.arc(particleArray[i].x , particleArray[i].y , particleArray[i].size , 0, Math.PI * 2 , false);
+        
+        // COR DAS PARTÍCULAS: usa a cor de nascimento com 30% de opacidade
+        ctx.fillStyle = particleArray[i].colour.replace('rgb', 'rgba').replace(')', ', 0.30)'); 
+        ctx.fill();
     }
+    
+    // Conecta as partículas (rede)
+    connect(); 
+    
+    // Incrementa o hue para mudar a cor da rede/conexões
+    hue += 0.2; 
 }
-//init();
+
+// Inicialização e Animação ATIVADAS
+init();
 animate();
 
+// Listener de redimensionamento CORRIGIDO
 window.addEventListener('resize' , () => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.height;
-    init();
+    setCanvasSize();
+    init(); 
 })
 
-//remove mouse position periodically 
-
+// remove mouse position periodically (mantido para que as partículas voltem ao normal)
 setInterval(() => {
     mouse.x = undefined;
     mouse.y = undefined
 } , 1000);
-
-*/
-//mouse animation
-
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext('2d');
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-let spots = [];
-let hue = 0;
-const mouse = {
-    x: undefined,
-    y: undefined
-}
-
-canvas.addEventListener("mousemove"  ,(event ) => {
-    mouse.x = event.x;
-    mouse.y  = event.y;
-    for(let i = 0 ; i< 3 ; i++){
-        spots.push(new Particle())
-    }
-} )
-
-
-class Particle{
-    constructor(){
-        this.x = mouse.x;
-        this.y = mouse.y;
-
-        //here size of colors
-        this.size = Math.random() * 2 + 0.1;
-        this.speedX = Math.random() * 2 - 1 ;
-        this.speedY = Math.random() *2 - 1 ;
-        this.color  = 'hsl(' + hue + ',100% , 50% )';
-
-        console.log("color" , this.color)
-    }
-
-    update(){
-        this.x += this.speedX;
-        this.y += this.speedY ;
-        if(this.size > 0.1) this.size -= 0.03;
-    }
-
-    draw(){
-        ctx.fillStyle = this.color ;
-        ctx.beginPath();
-        ctx.arc(this.x , this.y  , this.size , 0 , Math.PI * 2);
-
-        ctx.fill()
-    }
-}
-
-
-function handleParticle(){
-    for(let i = 0 ; i< spots.length ; i++){
-        spots[i].update();
-        spots[i].draw();
-        for(let j = i ; j < spots.length ; j++){
-            const dx = spots[i].x - spots[j].x;
-            const dy = spots[i].y - spots[j].y;
-
-            const distance = Math.sqrt(dx * dx + dy * dy );
-            if(distance < 90){
-                ctx.beginPath();
-                ctx.strokeStyle = spots[i].color;
-                ctx.lineWidth = spots[i].size / 5;
-                ctx.moveTo(spots[i].x , spots[i].y);
-                ctx.lineTo(spots[j].x , spots[j].y);
-                ctx.stroke();
-            }
-        }
-        if(spots[i].size <= 0.3){
-            spots.splice(i , 1) ; 
-            i--;
-        }
-    }
-}
-
-function animate(){
-    ctx.clearRect( 0 , 0 , canvas.width , canvas.height);
-    handleParticle()
-    hue++
-    requestAnimationFrame(animate)
-
-
-
-}
-
-window.addEventListener('resize' , function(){
-    canvas.width  = innerWidth;
-    canvas.height = innerHeight;
-
-    init()
-})
-
-window.addEventListener("mouseout" , function(){
-    mouse.x = undefined;
-    mouse.y = undefined;
-})
-
-animate()
