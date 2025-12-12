@@ -191,6 +191,7 @@ body {
     top: 10%; left: 10%; z-index: 10;
     display: flex; flex-direction: column; 
     border: 1px solid rgba(0, 0, 0, 0.1); /* Borda sutil */
+    
 }
 
 .janela-header {
@@ -233,12 +234,31 @@ body {
     color: white;
 }
 
-/* Estiliza o conteúdo para melhor aparência */
+/* --- Estilos do Conteúdo (Janela Geral) --- */
+
+.janela-body {
+    padding: 20px;
+    
+    /* 1. ESSENCIAL: Permite que o body ocupe todo o espaço disponível na janela */
+    flex-grow: 1; 
+    
+    /* 2. ESSENCIAL: Ativa a barra de rolagem vertical APENAS se o conteúdo exceder */
+    overflow-y: auto; 
+    
+    /* 3. Garante que não haja rolagem horizontal desnecessária */
+    overflow-x: hidden; 
+    
+    background-color: #ffffff;
+}
+
+
+/* Estiliza o H2 DE DENTRO DO BODY (Apenas formatação, SEM rolagem/flex) */
 .janela-body h2 {
     font-size: 1.4em;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
     margin-top: 0;
+    /* Remove as propriedades de flex e overflow que estavam erradas aqui */
 }
 
 /* --- Menu Iniciar (Start Menu) - REESTILIZADO --- */
@@ -540,4 +560,54 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     padding-top: 10px;
+}
+
+/* --- Estilos para o Cabeçalho de Perfil dentro da Janela Sobre Mim --- */
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px; /* Espaçamento antes da linha separadora */
+}
+
+.profile-photo {
+    width: 80px; /* Tamanho da foto de perfil */
+    height: 80px;
+    border-radius: 50%; /* Torna a foto circular */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin-right: 20px;
+    border: 3px solid var(--cor-primaria); /* Borda azul sutil para destaque */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.profile-details h2 {
+    /* Ajuste no título principal da seção */
+    font-size: 1.6em;
+    font-weight: 600;
+    color: var(--cor-primaria);
+    margin-top: 0;
+    margin-bottom: 5px;
+    border-bottom: none; /* Remove a linha do H2 aqui, usaremos a HR abaixo */
+    padding-bottom: 0;
+}
+
+.profile-details p {
+    color: #666; /* Texto cinza claro para a localização/detalhe */
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.profile-separator {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 15px 0 20px 0; /* Espaçamento após a linha */
+}
+
+/* Ajuste nos títulos da biografia para ficarem menores que o principal */
+.janela-body h3, .janela-body h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #444;
 }

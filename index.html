@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio derlan bentes</title>
-    
+
     <link rel="stylesheet" href="./src/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
     <div id="desktop">
@@ -30,7 +32,7 @@
             <i class="fas fa-envelope"></i>
             <span>Contato</span>
         </div>
-<div class="janela explorador" id="janela-pastas" style="display: none;">
+        <div class="janela explorador" id="janela-pastas" style="display: none;">
             <div class="janela-header">
                 <i class="fas fa-folder"></i> Pastas (Explorador)
                 <div class="janela-controles">
@@ -39,7 +41,7 @@
                     <button class="fechar" title="Fechar">X</button>
                 </div>
             </div>
-            
+
             <div class="explorer-toolbar">
                 <div class="toolbar-nav">
                     <i class="fas fa-arrow-left"></i>
@@ -57,7 +59,7 @@
                     <button><i class="fas fa-ellipsis-h"></i></button>
                 </div>
             </div>
-            
+
             <div class="janela-body explorer-layout">
                 <div class="explorer-sidebar">
                     <div class="sidebar-item active"><i class="fas fa-home"></i> Home</div>
@@ -118,12 +120,55 @@
                     <button class="fechar">X</button>
                 </div>
             </div>
+            
             <div class="janela-body">
-                <h2>[Seu Nome Aqui] | Desenvolvedor Web</h2>
-                <p>Use esta seção para contar sua história e habilidades.</p>
+                <div class="profile-header">
+                    <img src="./src/img/avatar.png" alt="avatar" class="profile-photo">
+                    <div class="profile-details">
+                        <h2>Derlan Bentes | Desenvolvedor Web</h2>
+                        <p>São José dos Pinhais , Parana, Brasil</p>
+                    </div>
+                </div>
+                
+                <hr class="profile-separator">
+
+                <h2>🌟 Tecnologia e Resiliência</h2>
+
+                <p>Olá! Sou <strong>Derlan </strong> e atuo como Desenvolvedor de
+                    Software, nascido e criado na vibrante cidade de Manaus.</p>
+
+                <h3>Onde a Paixão Começou</h3>
+                <p>Desde a infância, a tecnologia sempre foi mais do que um interesse; foi uma paixão. Essa jornada
+                    começou de forma mágica ao ganhar meu primeiro computador, rodando o saudoso <strong>Windows
+                        98</strong>. A curiosidade por saber como as coisas funcionavam por trás da tela me levou a
+                    buscar o conhecimento em programação.</p>
+
+                <p>Aos 18 anos, encontrei minha base no desenvolvimento. Aprendi a programar em <strong>Java</strong>,
+                    que se tornou a linguagem que mais domino e onde construí minha experiência profissional,
+                    especialmente em sistemas robustos e de alta performance.</p>
+
+                <h3>Resiliência e Crescimento</h3>
+                <p>Minha adolescência e juventude foram, em parte, marcadas pela timidez, o que, infelizmente, me fez
+                    deixar passar algumas oportunidades importantes. Contudo, hoje vejo essa fase como um período
+                    crucial de aprendizado sobre resiliência e autoconhecimento.</p>
+
+                <p>Aprendi que a vida é um solo fértil para oportunidades, e a chave é estar disposto a plantar e
+                    colher. Atualmente, busco ativamente novos desafios e colaborações, com a certeza de que a melhor
+                    chance é aquela que criamos.</p>
+
+                <h3>Paixão Fora da Tela</h3>
+                <p>Para equilibrar a intensa atividade do desenvolvimento, sou um entusiasta da vida ativa. Gosto de
+                    estar sempre em movimento, e busco a disciplina e a energia fora do escritório:</p>
+
                 <ul>
-                    <li>**Habilidades:** JavaScript, HTML, CSS, [Sua Tecnologia]</li>
+                    <li><strong>Corridas:</strong> Gosto de estar sempre ativo, mantendo a forma e clareando a mente.
+                    </li>
+                    <li><strong>Trilhas de Bike:</strong> Amo fazer trilhas de bike, o que exige foco e persistência,
+                        qualidades que se refletem no meu trabalho com código.</li>
                 </ul>
+
+                <p>Estou sempre aberto a novos projetos e ansioso para transformar desafios em soluções inovadoras!</p>
+
             </div>
         </div>
 
@@ -138,23 +183,25 @@
             </div>
             <div class="janela-body">
                 <h2>Vamos Conversar!</h2>
-                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a></p>
-                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/seu-perfil" target="_blank">seu-perfil</a></p>
+                <p><i class="fas fa-envelope"></i> Email: <a
+                        href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a></p>
+                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/seu-perfil"
+                        target="_blank">seu-perfil</a></p>
             </div>
         </div>
 
     </div>
 
     <div id="taskbar">
-        
+
         <div id="taskbar-left"></div>
 
         <div class="taskbar-center">
-            
+
             <button id="btn-start" class="taskbar-item">
                 <i class="fab fa-windows"></i>
             </button>
-            
+
             <div id="search-bar">
                 <i class="fas fa-search"></i>
                 <span>Pesquisar</span>
@@ -165,32 +212,32 @@
         </div>
 
         <div id="notification-area">
-            
+
             <div class="notif-item">
-                <i id="network-icon" class="fas fa-wifi"></i> 
+                <i id="network-icon" class="fas fa-wifi"></i>
             </div>
 
             <div class="notif-item">
-                <i class="fas fa-volume-up"></i> 
+                <i class="fas fa-volume-up"></i>
             </div>
-            
+
             <div class="notif-item time-date">
                 <span id="current-time" class="time"></span>
                 <span id="current-date" class="date"></span>
             </div>
-            
+
         </div>
     </div>
 
     <div id="start-menu" style="display: none;">
-        
+
         <div class="start-menu-search">
             <i class="fas fa-search"></i>
             <input type="text" placeholder="Pesquisar aplicativos, configurações e documentos">
         </div>
-        
+
         <div class="start-menu-main-content">
-            
+
             <div class="start-menu-apps">
                 <h3>Fixado</h3>
                 <div class="start-menu-grid">
@@ -210,7 +257,7 @@
                         <i class="fas fa-envelope" style="color: #4CAF50;"></i>
                         <span>Contato</span>
                     </div>
-                    </div>
+                </div>
 
 
             </div>
@@ -235,7 +282,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="start-menu-footer">
             <div class="start-menu-header">
                 <img src="./src/img/avatar.png" alt="Avatar" class="start-menu-avatar">
@@ -249,4 +296,5 @@
 
     <script src="./src/js/script.js"></script>
 </body>
+
 </html>
