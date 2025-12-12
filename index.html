@@ -1,555 +1,252 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="src/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
-    <!--   STYLE SWITCHER   -->
-    <link rel="stylesheet" href="src/css/colors/color-1.css" class="alternate-style" title="color-1">
-    <link rel="stylesheet" href="src/css/colors/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="src/css/colors/color-3.css" class="alternate-style" title="color-3" disabled>
-    <link rel="stylesheet" href="src/css/colors/color-4.css" class="alternate-style" title="color-4" disabled>
-    <link rel="stylesheet" href="src/css/colors/color-5.css" class="alternate-style" title="color-5" disabled>
-    <link rel="stylesheet" href="./src/css/style-switcher.css">
-    <title>derlansilva</title>
+    <title>Portfolio derlan bentes</title>
+    
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <!--MAIN CONTAINER START-->
-    <div class="main-container">
 
-        <!--ASIDE START-->
-        <div class="aside">
+    <div id="desktop">
+        <input type="file" id="wallpaper-input" accept="image/*" style="display: none;">
 
-            <div class="nav-toggler">
-                <span></span>
-            </div>
-            <ul class="nav animation-right">
-                <li class="active" href="#home"><i class="fa fa-home"></i><span>Home</span></li>
-
-                <li href="#about"><i class="fa fa-user"></i><span>About</span></li>
-
-                <li href="#service"><i class="fas fa-desktop"></i><span>Services</span></li>
-
-                <li href="#portfolio"><i class="fas fa-laptop-code"></i><span>Projects</span></li>
-
-                <li href="#contact"><i class="fa fa-comments"></i><span>Contacts</sapn>
-                </li>
-
-            </ul>
+        <div class="icone" id="icone-pastas">
+            <i class="fas fa-folder"></i>
+            <span>Pastas</span>
         </div>
-        <!--ASIDE END-->
-
-        <!--MAIN CONTENT START-->
-        <div class="main-content">
-
-            <!--HOME SECTION START-->
-            <section class="home active section section-home" id="home">
-                <canvas id='canvas'></canvas>
-                <div class="container row-home">
-                    <div class="row">
-                        <div class="home-info animation-top padd-15">
-                            <h3 class="hello">Hello , I´m <span class="name">Derlan Bentes</span></h3>
-                            <h3 class="my-profession"><span class="typing">Full-stack Developer</span></h3>
-                            <p>I´m a backend developer with extensive experience for over 4 years ,
-                                during my career I already learned a little about Python,
-                                Javascript, but it was in Java where I managed to find myself,
-                                i´m currently looking for my first oppotunity as a developer
-                            </p>
-                            <div class="home-icons animation-right">
-                                <a href=""><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://www.facebook.com/joderlan.silva.3/" target="_blank"><i
-                                        class="fab fa-facebook"></i></a>
-                                <a href="https://github.com/derlansilva" target="_blank"><i
-                                        class="fab fa-github"></i></a>
-                                <a href="https://www.instagram.com/derlansilvadev/" target="_blank"><i
-                                        class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/in/derlan-silva-603a81197/" target="_blank"><i
-                                        class="fab fa-linkedin"></i></a>
-
-
-                            </div>
-                            <a href="#" class="btn animation-bottom">Download CV </a>
-                        </div>
-                        <div class="home-img animation-bottom padd-15">
-                            <section class="featured">
-                                <div class="featured--vetical">
-                                    <div class="featured--horizontal">
-                                    </div>
-                                </div>
-
-
-                            </section>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--HOME SECTION END -->
-            <!--=======ABOUT SELECTION START======-->
-            <section class="about section section-home" id="about">
-                <div class="container">
-
-                    <div class="row row-about">
-                        <div class="about-content padd-15">
-                            <div class="about-row">
-                                <div class="about-img">
-                                    <section class="about--featured">
-                                        <div class="about--featured--vetical">
-                                            <div class="about--featured--horizontal">
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                                <div class="about-text padd-15 second-about">
-                                    <h3>I´m Derlan Bentes and <span>Full-stack Developer</span></h3>
-                                    <p>I was born in a small town in the interior of the Amazonas ,</p>
-                                    <p>and since was a child,tecnology was my been my passion</p>
-                                    <p>i´m currently looking for my first oppotunity as a developer</p>
-                                </div>
-                            </div>
-                            <div class="row third-about">
-                                <div class="personal-info padd-15">
-                                    <div class="row">
-                                        <div class="info-item padd-15">
-                                            <p>Birthday : <span>10 jun 1994</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Age : <span>28</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>GitHub : <span>https:://github.com/derlansilva</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>E-email : <span>joderlan.silva@gmail.com</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Phone : <span>+55 92 991332369</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>City : <span>Curitiba - PR - Brazil</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="buttons padd-15 ">
-
-                                            <a href="#contact" data-section-index="1" class="btn hire-me">Hire me </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="skills padd-15">
-                                    <div class="row">
-                                        <div class="skill-item padd-15">
-                                            <h5> <i class="fab fa-css3"></i> CSS</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 50%;"></div>
-                                                <div class="skill-percent">50%</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item padd-15">
-                                            <h5><i class="fab fa-js"></i> JAVASCRIPT</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 80%;"></div>
-                                                <div class="skill-percent">80</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item padd-15">
-                                            <h5> <i class="fab fa-html5"></i> HTML</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 85%;"></div>
-                                                <div class="skill-percent">85%</div>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item padd-15">
-                                            <h5><i class="fab fa-python"></i> PYTHON</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 45%;"></div>
-                                                <div class="skill-percent">45%</div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row  fourth-about">
-                                <div class="education padd-15">
-                                    <h3 class="title">Education</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15 fourth-about">
-                                            <div class="timeline shadow-dark">
-                                                <!-- ===== timeline item ===== -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2018 - 2020
-                                                    </h3>
-                                                    <h4 class="timeline-title">Analysis and System developement</h4>
-                                                    <p class="timeline-text">
-                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Impedit consequuntur totam reprehenderit at eaque cumque
-                                                        excepturi magni explicabo! Ut, perferendis debitis illo
-                                                        nihil animi ab.
-                                                    </p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2018 - 2020
-                                                    </h3>
-                                                    <h4 class="timeline-title">Analysis and System developement</h4>
-                                                    <p class="timeline-text">
-                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Impedit consequuntur totam reprehenderit at eaque cumque
-                                                        excepturi magni explicabo! Ut, perferendis debitis illo
-                                                        nihil animi ab.
-                                                    </p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2018 - 2020
-                                                    </h3>
-                                                    <h4 class="timeline-title">Analysis and System developement</h4>
-                                                    <p class="timeline-text">
-                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Impedit consequuntur totam reprehenderit at eaque cumque
-                                                        excepturi magni explicabo! Ut, perferendis debitis illo
-                                                        nihil animi ab.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="experience padd-15">
-                                    <h3 class="title">Experience</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <!-- ===== timeline item ===== -->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2014 - 2020
-                                                    </h3>
-                                                    <h4 class="timeline-title">Analysis and System developement</h4>
-                                                    <p class="timeline-text">
-                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Impedit consequuntur totam reprehenderit at eaque cumque
-                                                        excepturi magni explicabo! Ut, perferendis debitis illo
-                                                        nihil animi ab.
-                                                    </p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2018 - 2020
-                                                    </h3>
-                                                    <h4 class="timeline-title">Analysis and System developement</h4>
-                                                    <p class="timeline-text">
-                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Impedit consequuntur totam reprehenderit at eaque cumque
-                                                        excepturi magni explicabo! Ut, perferendis debitis illo
-                                                        nihil animi ab.
-                                                    </p>
-                                                </div>
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i>2018 - 2020
-                                                    </h3>
-                                                    <h4 class="timeline-title">Analysis and System developement</h4>
-                                                    <p class="timeline-text">
-                                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                        Impedit consequuntur totam reprehenderit at eaque cumque
-                                                        excepturi magni explicabo! Ut, perferendis debitis illo
-                                                        nihil animi ab.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-            <!--=======ABOUT SELECTION END======-->
-
-            <!--=======SERVICES SELECTION START======-->
-            <section class="service section section-service" id="service">
-                <div class="container">
-                    <div class="row row-service">
-                        <div class="service-content padd-15">
-                            <!-- =====SERVICES ITEM START===== -->
-                            <div class="service-item">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-mobile-alt"></i>
-                                    </div>
-                                    <h4>Mobile Developer</h4>
-                                    <p>Mobile Developement with React-Native</p>
-                                </div>
-                            </div>
-                            <!-- =====SERVICES ITEM END===== -->
-
-                            <div class="service-item">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-laptop-code"></i>
-                                    </div>
-                                    <h4>Font-end Developer</h4>
-                                    <p>Fron-end Developement with React.js</p>
-                                </div>
-                            </div>
-                            <!-- =====SERVICES ITEM END===== -->
-
-
-                            <!-- =====SERVICES ITEM END===== -->
-
-                            <div class="service-item">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-code"></i>
-                                    </div>
-                                    <h4>Back-end Developer</h4>
-                                    <p>Back-end Developement with Node.js with Javascript and Typescript</p>
-                                </div>
-                            </div>
-
-                            <div class="service-item">
-                                <div class="service-item-inner">
-                                    <div class="icon">
-                                        <i class="fa fa-code"></i>
-                                    </div>
-                                    <h4>Back-end Developer</h4>
-                                    <p>Back-end Developement with JAVA </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <!--=======SERVICES SELECTION END======-->
-
-            <!-- ====== PORTIFOLIO SECTION START ======= -->
-            <section class="portfolio section section-portfolio" id="portfolio">
-                <div class="container">
-
-                    <div class="row  row-portfolio">
-                        <div class="portfolio-content">
-                            <!-- ============ PORTFOLIO ITEM START ===========-->
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                        <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG"
-                                            alt="" srcset="">
-                                    </div>
-                                    <div class="portfolio-layer">
-                                        <h4>Netflix clone</h4>
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
-                                            facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam
-                                            quos,
-                                            in ducimus atque doloremque accusamus odit, amet reiciendis sed!
-                                        </p>
-                                        <a href=" "> <i class="fas fa-laptop-code"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                        <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG"
-                                            alt="" srcset="">
-                                    </div>
-                                    <div class="portfolio-layer">
-                                        <h4>Netflix clone</h4>
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
-                                            facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam
-                                            quos,
-                                            in ducimus atque doloremque accusamus odit, amet reiciendis sed!
-                                        </p>
-                                        <a href=" "> <i class="fas fa-laptop-code"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                        <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG"
-                                            alt="" srcset="">
-                                    </div>
-                                    <div class="portfolio-layer">
-                                        <h4>Netflix clone</h4>
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
-                                            facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam
-                                            quos,
-                                            in ducimus atque doloremque accusamus odit, amet reiciendis sed!
-                                        </p>
-                                        <a href=" "> <i class="fas fa-laptop-code"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portfolio-item">
-                                <div class="portfolio-item-inner shadow-dark">
-                                    <div class="portfolio-img">
-                                        <img src="https://raw.githubusercontent.com/derlansilva/NetflixClone/main/src/images/netflix.JPG"
-                                            alt="" srcset="">
-                                    </div>
-                                    <div class="portfolio-layer">
-                                        <h4>Netflix clone</h4>
-                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda,
-                                            facere soluta? Distinctio cum repellat adipisci aut. Sit culpa natus nam
-                                            quos,
-                                            in ducimus atque doloremque accusamus odit, amet reiciendis sed!
-                                        </p>
-                                        <a href=" "> <i class="fas fa-laptop-code"></i> </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- ============ PORTFOLIO ITEM END ===========-->
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- ====== PORTIFOLIO SECTION END ======= -->
-            <!-- ====== CONTACT SECTION START ======= -->
-            <section class="contact section section-contact" id="contact">
-                <div class="container row-contact">
-                    <div>
-
-                        <div class="row contact-content first-contact">
-                            <div class="section-title padd-15">
-                                <h2>Contact Me</h2>
-                            </div>
-                        </div>
-
-                        <h3 class="contact-title padd-15 second-contact">Have You Any Question ?</h3>
-                        <h4 class="contact-sub-title padd-15 third-contact">I´M AT YOUR SERVICES </h4>
-                        <div class="row contact-content fourth-contact">
-                            <!-- ====== CONTACT INFO ITEM START ======-->
-                            <div class="contact-info-item padd-15 first ">
-                                <div class="icon"><i class="fa fa-phone"></i></div>
-                                <h4>Call Us On </h4>
-                                <p>+55 92 99133-2369</p>
-                            </div>
-
-                            <div class="contact-info-item padd-15 second">
-                                <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                                <h4>Office </h4>
-                                <p>Curitiba Pr Brazil</p>
-                            </div>
-
-                            <div class="contact-info-item padd-15">
-                                <div class="icon"><i class="fa fa-envelope"></i></div>
-                                <h4>E-mail </h4>
-                                <p>joderlan.silva@gmail.com</p>
-                            </div>
-
-                            <div class="contact-info-item padd-15">
-                                <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                                <h4>Website </h4>
-                                <p>.....</p>
-                            </div>
-
-                            <!-- ====== CONTACT INFO ITEM END ======-->
-                        </div>
-
-                        <h3 class="contact-title padd-15 right-contact">SEND ME AN E-MAIL</h3>
-                        <h4 class="contact-sub-title padd-15">I´M VERY RESPONSIVE TO MESSENGES </h4>
-
-                        <!-- CONTACT FORM -->
-                        <div class="row contact-content fiveth-contact">
-                            <div class="contact-form padd-15">
-                                <div class="row">
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Name">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-item col-6 padd-15">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" placeholder="E-Mail">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="form-item col-12 padd-15">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Subject">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="form-item col-12 padd-15">
-                                        <div class="form-group">
-                                            <textarea name="" class="form-control" id=""
-                                                placeholder="Message"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="form-item col-12 padd-15">
-                                        <button type="submit" class="btn">Send Message</button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-            </section>
-            <!-- ====== CONTACT SECTION END ======= -->
-            <!--MAIN CONTENT END-->
+        <div class="icone" id="icone-projetos">
+            <i class="fas fa-code"></i>
+            <span>Projetos</span>
         </div>
-        <!--MAIN CONTAINER END-->
-
-        <!-- STYLE SWITCHER START -->
-        <div class="style-switcher">
-            <div class="style-switcher-toggler s-icon  animation-left">
-                <i class="fas fa-cog fa-spin"></i>
+        <div class="icone" id="icone-sobre">
+            <i class="fas fa-user-circle"></i>
+            <span>Sobre
+            </span>
+        </div>
+        <div class="icone" id="icone-contato">
+            <i class="fas fa-envelope"></i>
+            <span>Contato</span>
+        </div>
+<div class="janela explorador" id="janela-pastas" style="display: none;">
+            <div class="janela-header">
+                <i class="fas fa-folder"></i> Pastas (Explorador)
+                <div class="janela-controles">
+                    <button class="minimizar" title="Minimizar">-</button>
+                    <button class="maximizar" title="Maximizar">☐</button>
+                    <button class="fechar" title="Fechar">X</button>
+                </div>
             </div>
-
-            <div class="day-night s-icon animation-left">
-                <i class="fas"></i>
+            
+            <div class="explorer-toolbar">
+                <div class="toolbar-nav">
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-right disabled"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <div class="toolbar-search">
+                    <input type="text" placeholder="Pesquisar em Pastas">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="toolbar-commands">
+                    <button>Novo</button>
+                    <button>Copiar</button>
+                    <button>Renomear</button>
+                    <button><i class="fas fa-ellipsis-h"></i></button>
+                </div>
             </div>
+            
+            <div class="janela-body explorer-layout">
+                <div class="explorer-sidebar">
+                    <div class="sidebar-item active"><i class="fas fa-home"></i> Home</div>
+                    <div class="sidebar-item"><i class="fas fa-desktop"></i> Desktop</div>
+                    <div class="sidebar-item"><i class="fas fa-download"></i> Downloads</div>
+                    <div class="sidebar-item"><i class="fas fa-image"></i> Imagens</div>
+                </div>
 
-
-            <h4>Theme Colors</h4>
-            <div class="colors ">
-                <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-                <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-                <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-                <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-                <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                <div class="explorer-content">
+                    <h2>Selecione o Arquivo:</h2>
+                    <div class="arquivos-container">
+                        <div class="arquivo" data-janela-alvo="#janela-projetos">
+                            <i class="fas fa-code"></i>
+                            <span>Projetos.exe</span>
+                        </div>
+                        <div class="arquivo" data-janela-alvo="#janela-sobre">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Curriculum.pdf</span>
+                        </div>
+                        <div class="arquivo" data-janela-alvo="#janela-contato">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>Contato.txt</span>
+                        </div>
+                        <div class="arquivo" id="abrir-wallpaper">
+                            <i class="fas fa-image"></i>
+                            <span>Mudar_Wallpaper</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <!-- STYLE SWITCHER END -->
-        <script src="https://unpkg.com/scrollreveal"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
-            referrerpolicy="no-referrer"></script>
-        <script src="src/js/index.js"></script>
-        <script src="src/js/pageController.js"></script>
-        <script src="./src/js/script.js"></script>
 
+        <div class="janela" id="janela-projetos" style="display: none;">
+            <div class="janela-header">
+                <i class="fas fa-code"></i> Meus Projetos
+                <div class="janela-controles">
+                    <button class="minimizar">-</button>
+                    <button class="maximizar">☐</button>
+                    <button class="fechar">X</button>
+                </div>
+            </div>
+            <div class="janela-body">
+                <h3>Aqui estarão seus cards de projetos.</h3>
+                <div class="projeto-card">
+                    <h4>E-commerce em React</h4>
+                    <p>Descrição curta do projeto e tecnologias usadas.</p>
+                    <a href="#" target="_blank">Ver Projeto</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="janela" id="janela-sobre" style="display: none;">
+            <div class="janela-header">
+                <i class="fas fa-user-circle"></i> Sobre Mim
+                <div class="janela-controles">
+                    <button class="minimizar">-</button>
+                    <button class="maximizar">☐</button>
+                    <button class="fechar">X</button>
+                </div>
+            </div>
+            <div class="janela-body">
+                <h2>[Seu Nome Aqui] | Desenvolvedor Web</h2>
+                <p>Use esta seção para contar sua história e habilidades.</p>
+                <ul>
+                    <li>**Habilidades:** JavaScript, HTML, CSS, [Sua Tecnologia]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="janela" id="janela-contato" style="display: none;">
+            <div class="janela-header">
+                <i class="fas fa-envelope"></i> Contato
+                <div class="janela-controles">
+                    <button class="minimizar">-</button>
+                    <button class="maximizar">☐</button>
+                    <button class="fechar">X</button>
+                </div>
+            </div>
+            <div class="janela-body">
+                <h2>Vamos Conversar!</h2>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a></p>
+                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/seu-perfil" target="_blank">seu-perfil</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="taskbar">
+        
+        <div id="taskbar-left"></div>
+
+        <div class="taskbar-center">
+            
+            <button id="btn-start" class="taskbar-item">
+                <i class="fab fa-windows"></i>
+            </button>
+            
+            <div id="search-bar">
+                <i class="fas fa-search"></i>
+                <span>Pesquisar</span>
+            </div>
+
+            <div id="open-apps-container" style="display: flex; height: 100%;">
+            </div>
+        </div>
+
+        <div id="notification-area">
+            
+            <div class="notif-item">
+                <i id="network-icon" class="fas fa-wifi"></i> 
+            </div>
+
+            <div class="notif-item">
+                <i class="fas fa-volume-up"></i> 
+            </div>
+            
+            <div class="notif-item time-date">
+                <span id="current-time" class="time"></span>
+                <span id="current-date" class="date"></span>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="start-menu" style="display: none;">
+        
+        <div class="start-menu-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Pesquisar aplicativos, configurações e documentos">
+        </div>
+        
+        <div class="start-menu-main-content">
+            
+            <div class="start-menu-apps">
+                <h3>Fixado</h3>
+                <div class="start-menu-grid">
+                    <div class="start-menu-app-item" data-janela-alvo="#janela-pastas">
+                        <i class="fas fa-folder" style="color: #0078D4;"></i>
+                        <span>Explorador de Arquivos</span>
+                    </div>
+                    <div class="start-menu-app-item" data-janela-alvo="#janela-projetos">
+                        <i class="fas fa-code" style="color: #61DAFB;"></i>
+                        <span>Projetos</span>
+                    </div>
+                    <div class="start-menu-app-item" data-janela-alvo="#janela-sobre">
+                        <i class="fas fa-user-circle" style="color: #FF5722;"></i>
+                        <span>Sobre</span>
+                    </div>
+                    <div class="start-menu-app-item" data-janela-alvo="#janela-contato">
+                        <i class="fas fa-envelope" style="color: #4CAF50;"></i>
+                        <span>Contato</span>
+                    </div>
+                    </div>
+
+
+            </div>
+
+            <div class="start-menu-recommendations">
+                <h3>Recomendações</h3>
+                <div class="recommendation-list">
+                    <div class="recommendation-item">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="rec-details">
+                            <span>Relatório de Vendas Q3</span>
+                            <small>2h atrás</small>
+                        </div>
+                    </div>
+                    <div class="recommendation-item">
+                        <i class="fas fa-file-pdf"></i>
+                        <div class="rec-details">
+                            <span>Curriculum Vitae</span>
+                            <small>Ontem às 22:00</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="start-menu-footer">
+            <div class="start-menu-header">
+                <img src="./src/img/avatar.png" alt="Avatar" class="start-menu-avatar">
+                <span>joderlan bentes</span>
+            </div>
+            <button class="btn-shut-down">
+                <i class="fas fa-power-off"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="./src/js/script.js"></script>
 </body>
-
 </html>
