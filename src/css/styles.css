@@ -63,6 +63,21 @@ body {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para destacar no fundo */
 }
 
+#icone-projetos i{
+    color: red;
+   
+}
+#icone-pastas i{
+    color: #0078D4;
+}
+
+#icone-sobre i{
+    color: orangered;
+}
+
+#icone-contato i{
+    color: #0beedb;
+}
 .icone span {
     font-size: 0.75em;
     word-wrap: break-word;
