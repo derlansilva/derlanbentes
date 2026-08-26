@@ -626,3 +626,220 @@ body {
     margin-bottom: 10px;
     color: #444;
 }
+
+
+
+
+
+/* --- Janelas de Aplicativo (Corrigido) --- */
+.janela {
+    position: absolute; 
+    width: 750px;
+    max-width: 90vw;
+    height: 500px;
+    max-height: 80vh;
+    background-color: #f3f3f3; 
+    color: var(--cor-janela-texto);
+    border-radius: 8px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden; 
+    resize: both; 
+    min-width: 300px; 
+    min-height: 200px;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Centraliza na tela por padrão */
+    z-index: 10;
+    display: none; /* O JS abre automaticamente a principal */
+    flex-direction: column; 
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+/* --- Estilização da Janela de Projetos --- */
+.projetos-body {
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f8f9fa;
+}
+
+.projetos-header {
+    margin-bottom: 20px;
+}
+
+.projetos-header h2 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.projetos-header p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+/* Grid Layout */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Card individual */
+.projeto-card {
+    background: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-header-icon {
+    font-size: 2rem;
+    color: #0078d4;
+    margin-bottom: 10px;
+}
+
+.projeto-card h3 {
+    font-size: 1.1rem;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.projeto-card p {
+    font-size: 0.85rem;
+    color: #4b5563;
+    line-height: 1.4;
+    flex-grow: 1;
+}
+
+/* Badges / Tags */
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0;
+}
+
+.tag {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+/* Ações e Botões */
+.card-acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-code, .btn-link {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s ease;
+}
+
+.btn-code {
+    background-color: #24292e;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-code:hover {
+    background-color: #3b4045;
+}
+
+.btn-link {
+    background-color: #f3f4f6;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.btn-link:hover {
+    background-color: #e5e7eb;
+}
+
+/* Visualizador de Código (Dark Theme / VS Code) */
+.code-viewer {
+    display: none;
+    margin-top: 12px;
+    background-color: #1e1e1e;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.code-header {
+    background-color: #252526;
+    color: #cccccc;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    border-bottom: 1px solid #333333;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.code-viewer pre {
+    margin: 0;
+    padding: 12px;
+    overflow-x: auto;
+}
+
+.code-viewer code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #9cdcfe;
+    line-height: 1.4;
+}
+
+
+/* Correção dos ícones na barra de tarefas */
+#open-apps-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.taskbar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.taskbar-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.taskbar-item.taskbar-ativo {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-bottom: 2px solid #0078d4;
+}

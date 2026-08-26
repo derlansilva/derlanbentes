@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio derlan bentes</title>
-
+    <title>Derlan Bentes | Desenvolvedor Java & Web</title>
     <link rel="stylesheet" href="./src/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -15,26 +14,28 @@
     <div id="desktop">
         <input type="file" id="wallpaper-input" accept="image/*" style="display: none;">
 
-        <div class="icone" id="icone-pastas">
-            <i class="fas fa-folder"></i>
-            <span>Pastas</span>
+        <!-- Ícones do Desktop -->
+        <div class="icone" id="icone-sobre">
+            <i class="fas fa-user-circle"></i>
+            <span>Sobre.exe</span>
         </div>
         <div class="icone" id="icone-projetos">
             <i class="fas fa-code"></i>
-            <span>Projetos</span>
+            <span>Projetos.exe</span>
         </div>
-        <div class="icone" id="icone-sobre">
-            <i class="fas fa-user-circle"></i>
-            <span>Sobre
-            </span>
+        <div class="icone" id="icone-pastas">
+            <i class="fas fa-folder"></i>
+            <span>Explorador</span>
         </div>
         <div class="icone" id="icone-contato">
             <i class="fas fa-envelope"></i>
-            <span>Contato</span>
+            <span>Contato.txt</span>
         </div>
-        <div class="janela explorador" id="janela-pastas" style="display: none;">
+
+        <!-- Janela Sobre Mim -->
+        <div class="janela" id="janela-sobre">
             <div class="janela-header">
-                <i class="fas fa-folder"></i> Pastas (Explorador)
+                <i class="fas fa-user-circle"></i> Sobre Mim - Derlan Bentes
                 <div class="janela-controles">
                     <button class="minimizar" title="Minimizar">-</button>
                     <button class="maximizar" title="Maximizar">☐</button>
@@ -42,91 +43,13 @@
                 </div>
             </div>
 
-            <div class="explorer-toolbar">
-                <div class="toolbar-nav">
-                    <i class="fas fa-arrow-left"></i>
-                    <i class="fas fa-arrow-right disabled"></i>
-                    <i class="fas fa-arrow-up"></i>
-                </div>
-                <div class="toolbar-search">
-                    <input type="text" placeholder="Pesquisar em Pastas">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div class="toolbar-commands">
-                    <button>Novo</button>
-                    <button>Copiar</button>
-                    <button>Renomear</button>
-                    <button><i class="fas fa-ellipsis-h"></i></button>
-                </div>
-            </div>
-
-            <div class="janela-body explorer-layout">
-                <div class="explorer-sidebar">
-                    <div class="sidebar-item active"><i class="fas fa-home"></i> Home</div>
-                    <div class="sidebar-item"><i class="fas fa-desktop"></i> Desktop</div>
-                    <div class="sidebar-item"><i class="fas fa-download"></i> Downloads</div>
-                    <div class="sidebar-item"><i class="fas fa-image"></i> Imagens</div>
-                </div>
-
-                <div class="explorer-content">
-                    <h2>Selecione o Arquivo:</h2>
-                    <div class="arquivos-container">
-                        <div class="arquivo" data-janela-alvo="#janela-projetos">
-                            <i class="fas fa-code"></i>
-                            <span>Projetos.exe</span>
-                        </div>
-                        <div class="arquivo" data-janela-alvo="#janela-sobre">
-                            <i class="fas fa-file-alt"></i>
-                            <span>Curriculum.pdf</span>
-                        </div>
-                        <div class="arquivo" data-janela-alvo="#janela-contato">
-                            <i class="fas fa-envelope-open-text"></i>
-                            <span>Contato.txt</span>
-                        </div>
-                        <div class="arquivo" id="abrir-wallpaper">
-                            <i class="fas fa-image"></i>
-                            <span>Mudar_Wallpaper</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="janela" id="janela-projetos" style="display: none;">
-            <div class="janela-header">
-                <i class="fas fa-code"></i> Meus Projetos
-                <div class="janela-controles">
-                    <button class="minimizar">-</button>
-                    <button class="maximizar">☐</button>
-                    <button class="fechar">X</button>
-                </div>
-            </div>
-            <div class="janela-body">
-                <h3>Aqui estarão seus cards de projetos.</h3>
-                <div class="projeto-card">
-                    <h4>E-commerce em React</h4>
-                    <p>Descrição curta do projeto e tecnologias usadas.</p>
-                    <a href="#" target="_blank">Ver Projeto</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="janela" id="janela-sobre" style="display: none;">
-            <div class="janela-header">
-                <i class="fas fa-user-circle"></i> Sobre Mim
-                <div class="janela-controles">
-                    <button class="minimizar">-</button>
-                    <button class="maximizar">☐</button>
-                    <button class="fechar">X</button>
-                </div>
-            </div>
-            
             <div class="janela-body">
                 <div class="profile-header">
-                    <img src="./src/img/avatar.png" alt="avatar" class="profile-photo">
+                    <img src="./src/img/avatar.png" alt="Foto de Derlan Bentes" class="profile-photo">
                     <div class="profile-details">
-                        <h2>Derlan Bentes | Desenvolvedor Web</h2>
-                        <p>São José dos Pinhais , Parana, Brasil</p>
+                        <h2>Derlan Bentes</h2>
+                        <p><strong>Desenvolvedor Backend / Java & Web</strong></p>
+                        <p><i class="fas fa-map-marker-alt"></i> São José dos Pinhais, PR - Brasil</p>
                     </div>
                 </div>
                 
@@ -172,33 +95,144 @@
             </div>
         </div>
 
+        <!-- Janela Meus Projetos -->
+        <div class="janela" id="janela-projetos" style="display: none;">
+            <div class="janela-header">
+                <i class="fas fa-code"></i> Meus Projetos
+                <div class="janela-controles">
+                    <button class="minimizar" title="Minimizar">-</button>
+                    <button class="maximizar" title="Maximizar">☐</button>
+                    <button class="fechar" title="Fechar">X</button>
+                </div>
+            </div>
+
+            <div class="janela-body projetos-body">
+                <div class="projetos-header">
+                    <h2><i class="fas fa-folder-open"></i> Repositório de Projetos</h2>
+                    <p>Explore meus principais desenvolvimentos, arquitetura e snippets de código.</p>
+                </div>
+
+                <div class="projetos-grid">
+                    <div class="projeto-card">
+                        <div class="card-header-icon"><i class="fab fa-react"></i></div>
+                        <h3>E-commerce em React</h3>
+                        <p>Plataforma completa de vendas online.</p>
+                        <div class="tech-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                        <div class="card-acoes">
+                            <button class="btn-code" onclick="toggleCodeBlock('code-proj-1')"><i class="fas fa-code"></i> Ver Código</button>
+                            <a href="https://github.com" target="_blank" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                        <div class="code-viewer" id="code-proj-1">
+                            <pre><code>// Hook customizado</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="projeto-card">
+                        <div class="card-header-icon"><i class="fab fa-node-js"></i></div>
+                        <h3>API RESTful Node.js</h3>
+                        <p>Backend performático com JWT.</p>
+                        <div class="tech-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                        </div>
+                        <div class="card-acoes">
+                            <button class="btn-code" onclick="toggleCodeBlock('code-proj-2')"><i class="fas fa-code"></i> Ver Código</button>
+                            <a href="https://github.com" target="_blank" class="btn-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                        <div class="code-viewer" id="code-proj-2">
+                            <pre><code>// Token JWT</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Janela Explorador de Arquivos -->
+        <div class="janela explorador" id="janela-pastas" style="display: none;">
+            <div class="janela-header">
+                <i class="fas fa-folder"></i> Explorador de Arquivos
+                <div class="janela-controles">
+                    <button class="minimizar" title="Minimizar">-</button>
+                    <button class="maximizar" title="Maximizar">☐</button>
+                    <button class="fechar" title="Fechar">X</button>
+                </div>
+            </div>
+
+            <div class="explorer-toolbar">
+                <div class="toolbar-nav">
+                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-right disabled"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <div class="toolbar-search">
+                    <input type="text" placeholder="Pesquisar no sistema...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="janela-body explorer-layout">
+                <div class="explorer-sidebar">
+                    <div class="sidebar-item active"><i class="fas fa-home"></i> Início</div>
+                    <div class="sidebar-item"><i class="fas fa-desktop"></i> Área de Trabalho</div>
+                    <div class="sidebar-item"><i class="fas fa-code"></i> Projetos</div>
+                </div>
+
+                <div class="explorer-content">
+                    <h2>Arquivos do Sistema</h2>
+                    <div class="arquivos-container">
+                        <div class="arquivo" data-janela-alvo="#janela-projetos">
+                            <i class="fas fa-code"></i>
+                            <span>Projetos.exe</span>
+                        </div>
+                        <div class="arquivo" data-janela-alvo="#janela-sobre">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Curriculum.pdf</span>
+                        </div>
+                        <div class="arquivo" data-janela-alvo="#janela-contato">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>Contato.txt</span>
+                        </div>
+                        <div class="arquivo" id="abrir-wallpaper">
+                            <i class="fas fa-image"></i>
+                            <span>Mudar_Wallpaper</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Janela Contato -->
         <div class="janela" id="janela-contato" style="display: none;">
             <div class="janela-header">
                 <i class="fas fa-envelope"></i> Contato
                 <div class="janela-controles">
-                    <button class="minimizar">-</button>
-                    <button class="maximizar">☐</button>
-                    <button class="fechar">X</button>
+                    <button class="minimizar" title="Minimizar">-</button>
+                    <button class="maximizar" title="Maximizar">☐</button>
+                    <button class="fechar" title="Fechar">X</button>
                 </div>
             </div>
             <div class="janela-body">
-                <h2>Vamos Conversar!</h2>
-                <p><i class="fas fa-envelope"></i> Email: <a
-                        href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a></p>
-                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/seu-perfil"
-                        target="_blank">seu-perfil</a></p>
+                <h2>Vamos se conectar?</h2>
+                <p>Estou disponível para novas oportunidades de trabalho e conexões profissionais.</p>
+                <div class="contato-links">
+                    <p><i class="fas fa-envelope"></i> <strong>E-mail:</strong> <a href="mailto:seu.email@exemplo.com">seu.email@exemplo.com</a></p>
+                    <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/seu-perfil" target="_blank">linkedin.com/in/seu-perfil</a></p>
+                    <p><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/derlansilva" target="_blank">github.com/derlansilva</a></p>
+                </div>
             </div>
         </div>
 
     </div>
 
+    <!-- Barra de Tarefas -->
     <div id="taskbar">
-
         <div id="taskbar-left"></div>
 
         <div class="taskbar-center">
-
-            <button id="btn-start" class="taskbar-item">
+            <button id="btn-start" class="taskbar-item" title="Menu Iniciar">
                 <i class="fab fa-windows"></i>
             </button>
 
@@ -207,77 +241,45 @@
                 <span>Pesquisar</span>
             </div>
 
-            <div id="open-apps-container" style="display: flex; height: 100%;">
-            </div>
+            <div id="open-apps-container"></div>
         </div>
 
         <div id="notification-area">
-
-            <div class="notif-item">
-                <i id="network-icon" class="fas fa-wifi"></i>
-            </div>
-
-            <div class="notif-item">
-                <i class="fas fa-volume-up"></i>
-            </div>
-
+            <div class="notif-item"><i id="network-icon" class="fas fa-wifi"></i></div>
+            <div class="notif-item"><i class="fas fa-volume-up"></i></div>
             <div class="notif-item time-date">
                 <span id="current-time" class="time"></span>
                 <span id="current-date" class="date"></span>
             </div>
-
         </div>
     </div>
 
+    <!-- Menu Iniciar -->
     <div id="start-menu" style="display: none;">
-
         <div class="start-menu-search">
             <i class="fas fa-search"></i>
-            <input type="text" placeholder="Pesquisar aplicativos, configurações e documentos">
+            <input type="text" placeholder="Pesquisar aplicativos e arquivos">
         </div>
 
         <div class="start-menu-main-content">
-
             <div class="start-menu-apps">
-                <h3>Fixado</h3>
+                <h3>Aplicativos Fixados</h3>
                 <div class="start-menu-grid">
-                    <div class="start-menu-app-item" data-janela-alvo="#janela-pastas">
-                        <i class="fas fa-folder" style="color: #0078D4;"></i>
-                        <span>Explorador de Arquivos</span>
+                    <div class="start-menu-app-item" data-janela-alvo="#janela-sobre">
+                        <i class="fas fa-user-circle" style="color: #FF5722;"></i>
+                        <span>Sobre Mim</span>
                     </div>
                     <div class="start-menu-app-item" data-janela-alvo="#janela-projetos">
                         <i class="fas fa-code" style="color: #61DAFB;"></i>
                         <span>Projetos</span>
                     </div>
-                    <div class="start-menu-app-item" data-janela-alvo="#janela-sobre">
-                        <i class="fas fa-user-circle" style="color: #FF5722;"></i>
-                        <span>Sobre</span>
+                    <div class="start-menu-app-item" data-janela-alvo="#janela-pastas">
+                        <i class="fas fa-folder" style="color: #0078D4;"></i>
+                        <span>Explorador</span>
                     </div>
                     <div class="start-menu-app-item" data-janela-alvo="#janela-contato">
                         <i class="fas fa-envelope" style="color: #4CAF50;"></i>
                         <span>Contato</span>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="start-menu-recommendations">
-                <h3>Recomendações</h3>
-                <div class="recommendation-list">
-                    <div class="recommendation-item">
-                        <i class="fas fa-file-alt"></i>
-                        <div class="rec-details">
-                            <span>Relatório de Vendas Q3</span>
-                            <small>2h atrás</small>
-                        </div>
-                    </div>
-                    <div class="recommendation-item">
-                        <i class="fas fa-file-pdf"></i>
-                        <div class="rec-details">
-                            <span>Curriculum Vitae</span>
-                            <small>Ontem às 22:00</small>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -286,9 +288,9 @@
         <div class="start-menu-footer">
             <div class="start-menu-header">
                 <img src="./src/img/avatar.png" alt="Avatar" class="start-menu-avatar">
-                <span>joderlan bentes</span>
+                <span>Derlan Bentes</span>
             </div>
-            <button class="btn-shut-down">
+            <button class="btn-shut-down" title="Desligar">
                 <i class="fas fa-power-off"></i>
             </button>
         </div>
